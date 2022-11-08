@@ -1,4 +1,9 @@
 {
+  "functions": {
+    "api/index.js": {
+      "includeFiles": "svg.ejs|163music.py"
+    }
+  },
   "rewrites": [
     { "source": "/", "destination": "/api/index" }
   ]

@@ -3,6 +3,10 @@
   "version": "1.0.0",
   "description": "Generates a beautiful Netease Cloud Music status for github profiles",
   "type": "module",
+  "scripts": {
+    "start": "vercel dev",
+    "deploy": "vercel --prod"
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/zonemeen/netease-recent-actions.git"
