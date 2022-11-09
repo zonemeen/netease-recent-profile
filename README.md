@@ -16,7 +16,7 @@
 获取账号id后，只需在你的README中添加以下内容，并将`id`查询参数设置为你的网易云音乐账号id
 
 ```md
-![Netease recently played](https://netease-recent-profile.vercel.app?id=126764012)
+[![Netease recently played](https://netease-recent-profile.vercel.app/?id=126764012)](https://netease-recent-profile.vercel.app/?id=126764012)
 ```
 
 [![Netease recently played](https://netease-recent-profile.vercel.app/?id=126764012)](https://netease-recent-profile.vercel.app/?id=126764012)
@@ -31,7 +31,7 @@
 - 所有时间的听歌排行：设为 `0`
 
 ```md
-![Netease recently played](https://netease-recent-profile.vercel.app?id=126764012&type=0)
+[![Netease recently played](https://netease-recent-profile.vercel.app/?id=126764012&type=0)](https://netease-recent-profile.vercel.app/?id=126764012&type=0)
 ```
 
 [![Netease recently played](https://netease-recent-profile.vercel.app/?id=126764012&type=0)](https://netease-recent-profile.vercel.app/?id=126764012&type=0)
@@ -43,7 +43,7 @@
 - 默认为 `5` 条
 
 ```md
-![Netease recently played](https://netease-recent-profile.vercel.app?id=126764012&number=3)
+[![Netease recently played](https://netease-recent-profile.vercel.app/?id=126764012&number=3)](https://netease-recent-profile.vercel.app/?id=126764012&number=3)
 ```
 
 [![Netease recently played](https://netease-recent-profile.vercel.app/?id=126764012&number=3)](https://netease-recent-profile.vercel.app/?id=126764012&number=3)
@@ -55,7 +55,7 @@
 - 默认标题为 `Recently Played`
 
 ```md
-![Netease recently played](https://netease-recent-profile.vercel.app?id=126764012&title=最近在听)
+[![Netease recently played](https://netease-recent-profile.vercel.app/?id=126764012&title=最近在听)](https://netease-recent-profile.vercel.app/?id=126764012&title=最近在听)
 ```
 
 [![Netease recently played](https://netease-recent-profile.vercel.app/?id=126764012&title=最近在听)](https://netease-recent-profile.vercel.app/?id=126764012&title=最近在听)
@@ -67,7 +67,7 @@
 - 默认图片大小为 `800`，尺寸越小，优点是svg尺寸较小，缺点是图片会失真变模糊
 
 ```md
-![Netease recently played](https://netease-recent-profile.vercel.app?id=126764012&size=60)
+[![Netease recently played](https://netease-recent-profile.vercel.app/?id=126764012&size=60)](https://netease-recent-profile.vercel.app/?id=126764012&size=60)
 ```
 
 [![Netease recently played](https://netease-recent-profile.vercel.app/?id=126764012&size=60)](https://netease-recent-profile.vercel.app/?id=126764012&size=60)
