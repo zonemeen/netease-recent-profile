@@ -62,13 +62,13 @@ export default async (request, response) => {
   const covers = await getAllImages(songs)
 
   const templateParams = {
-    recentPlayed: songs.map(({ song }, i) => {
+    recentPlayed: songs.map(({ song, score }, i) => {
       return {
         name: song.name,
         artist: song.ar.map(({ name }) => name).join('/'),
         cover: covers[i],
         url: `https://music.163.com/#/song?id=${song.id}`,
-        id: song.id
+        percent: score / 100
       }
     }),
     theme: { title },
