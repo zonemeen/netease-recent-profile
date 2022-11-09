@@ -64,7 +64,7 @@
 
 请传递查询参数`size`，并将其设置为你想要的图片大小
 
-- 默认图片大小为 `800`，尺寸越小，优点是svg尺寸较小，缺点是图片会失真变模糊
+- 默认图片大小为 `800`，尺寸越小，优点是svg尺寸较小、请求返回的时间变短，缺点是图片会失真变模糊
 
 ```md
 [![Netease recently played](https://netease-recent-profile.vercel.app/?id=126764012&size=60)](https://netease-recent-profile.vercel.app/?id=126764012&size=60)
