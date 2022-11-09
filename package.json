@@ -12,12 +12,12 @@
     "url": "git+https://github.com/zonemeen/netease-recent-actions.git"
   },
   "keywords": [
-    "actions",
     "node",
     "netease",
     "netease cloud music",
     "music",
-    "svg"
+    "svg",
+    "vercel"
   ],
   "author": "zonemeen <miqilin18@gmail.com>",
   "license": "MIT",

@@ -1,7 +1,7 @@
 {
   "functions": {
     "api/index.js": {
-      "includeFiles": "svg.ejs|163music.py"
+      "includeFiles": "svg.ejs"
     }
   },
   "rewrites": [
