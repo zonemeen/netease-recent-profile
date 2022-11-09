@@ -19,7 +19,7 @@
 ![Netease recently played](https://netease-recent-profile.vercel.app?id=126764012)
 ```
 
-![Netease recently played](https://netease-recent-profile.vercel.app?id=126764012)
+[![Netease recently played](https://netease-recent-profile.vercel.app/?id=126764012)](https://netease-recent-profile.vercel.app/?id=126764012)
 
 ## ⚙ 自定义配置
 
@@ -34,7 +34,7 @@
 ![Netease recently played](https://netease-recent-profile.vercel.app?id=126764012&type=0)
 ```
 
-![Netease recently played](https://netease-recent-profile.vercel.app?id=126764012&type=0)
+[![Netease recently played](https://netease-recent-profile.vercel.app/?id=126764012&type=0)](https://netease-recent-profile.vercel.app/?id=126764012&type=0)
 
 ### 歌曲数量
 
@@ -46,7 +46,7 @@
 ![Netease recently played](https://netease-recent-profile.vercel.app?id=126764012&number=3)
 ```
 
-![Netease recently played](https://netease-recent-profile.vercel.app?id=126764012&number=3)
+[![Netease recently played](https://netease-recent-profile.vercel.app/?id=126764012&number=3)](https://netease-recent-profile.vercel.app/?id=126764012&number=3)
 
 ### 标题
 
@@ -58,7 +58,7 @@
 ![Netease recently played](https://netease-recent-profile.vercel.app?id=126764012&title=最近在听)
 ```
 
-![Netease recently played](https://netease-recent-profile.vercel.app?id=126764012&title=最近在听)
+[![Netease recently played](https://netease-recent-profile.vercel.app/?id=126764012&title=最近在听)](https://netease-recent-profile.vercel.app/?id=126764012&title=最近在听)
 
 ### 图片尺寸
 
@@ -70,7 +70,7 @@
 ![Netease recently played](https://netease-recent-profile.vercel.app?id=126764012&size=60)
 ```
 
-![Netease recently played](https://netease-recent-profile.vercel.app?id=126764012&size=60)
+[![Netease recently played](https://netease-recent-profile.vercel.app/?id=126764012&size=60)](https://netease-recent-profile.vercel.app/?id=126764012&size=60)
 
 ## 📄 开源协议
 
