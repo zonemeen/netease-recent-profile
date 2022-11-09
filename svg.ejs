@@ -42,10 +42,10 @@ fontSizeLimit = function(text, fontSize, maxWidth){
             font-size="14"
             letter-spacing="0em"
     >
-  <tspan x="9" y="<%= 23.5 %>"><%= recentPlayed[0].title %></tspan>
+  <tspan x="9" y="<%= 23.5 %>"><%= theme.title %></tspan>
 </text>
     <%
-            for (const [index, value] of recentPlayed.entries()) {
+    for (const [index] of recentPlayed.entries()) {
     %>
         <rect
                 x="8.4"
