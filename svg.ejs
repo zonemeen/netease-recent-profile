@@ -47,6 +47,7 @@ fontSizeLimit = function(text, fontSize, maxWidth){
     <%
     for (const [index] of recentPlayed.entries()) {
     %>
+    <a href="<%= recentPlayed[index].url %>" target="_blank" >
         <rect
                 x="8.4"
                 y="<%= (27+index*42)*1.4 %>"
@@ -65,7 +66,7 @@ fontSizeLimit = function(text, fontSize, maxWidth){
                 letter-spacing="0em"
         >
   <tspan x="60.2" y="<%= (42.844+index*42)*1.4 %>"><a id="netease" target="_blank" href="<%= recentPlayed[index].url %>"><%= fontSizeLimit(recentPlayed[index].name,8,220) %></a></tspan>
-  </text>
+        </text>
         <text
                 fill="white"
                 fill-opacity="0.66"
@@ -75,7 +76,8 @@ fontSizeLimit = function(text, fontSize, maxWidth){
                 letter-spacing="0em"
         >
     <tspan x="60.2" y="<%= (54.258+index*42)*1.4 %>"><%= fontSizeLimit(recentPlayed[index].artist, 7, 220)  %></tspan>
-</text>
+        </text>
+    </a>
     <%
     }
     %>

@@ -54,6 +54,7 @@ export default async (request, response) => {
       },
     }
   )
+
   const songs = data[Number(type) === 1 ? 'weekData' : 'allData'].slice(0, Number(number))
   const getAllImages = (recentlyPlayedSongs) =>
     Promise.all(recentlyPlayedSongs.map(({ song }) => imageToBase64(song.al.picUrl)))
@@ -67,6 +68,7 @@ export default async (request, response) => {
         artist: song.ar.map(({ name }) => name).join('/'),
         cover: covers[i],
         url: `https://music.163.com/#/song?id=${song.id}`,
+        id: song.id
       }
     }),
     theme: { title },
