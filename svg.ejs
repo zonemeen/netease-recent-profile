@@ -47,6 +47,7 @@ fontSizeLimit = function(text, fontSize, maxWidth){
     <%
     for (const [index] of recentPlayed.entries()) {
     %>
+    <a href="<%= recentPlayed[index].url %>" target="_blank" >
         <rect
                 x="8.4"
                 y="<%= (27+index*42)*1.4 %>"
@@ -56,6 +57,8 @@ fontSizeLimit = function(text, fontSize, maxWidth){
                 fill="white"
                 fill-opacity="0.11"
         />
+                    <rect x="8.4" y="<%= (27+index*42)*1.4 %>" width="<%= (263.2 * recentPlayed[index].percent) %>" height="51.8" rx="2.8"
+                        fill="#4eb4f5" fill-opacity="0.11" />
         <rect x="14" y="<%= (31+index*42)*1.4 %>" width="40.6" height="40.6" rx="2.8" fill="<%= `url(#pattern${index})` %>" />
         <text
                 fill="white"
@@ -65,7 +68,7 @@ fontSizeLimit = function(text, fontSize, maxWidth){
                 letter-spacing="0em"
         >
   <tspan x="60.2" y="<%= (42.844+index*42)*1.4 %>"><a id="netease" target="_blank" href="<%= recentPlayed[index].url %>"><%= fontSizeLimit(recentPlayed[index].name, 8, themeConfig.width - 60) %></a></tspan>
-  </text>
+        </text>
         <text
                 fill="white"
                 fill-opacity="0.66"
@@ -75,7 +78,8 @@ fontSizeLimit = function(text, fontSize, maxWidth){
                 letter-spacing="0em"
         >
     <tspan x="60.2" y="<%= (54.258+index*42)*1.4 %>"><%= fontSizeLimit(recentPlayed[index].artist, 7, themeConfig.width - 60)  %></tspan>
-</text>
+        </text>
+    </a>
     <%
     }
     %>

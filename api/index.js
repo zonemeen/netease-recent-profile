@@ -25,6 +25,7 @@ export default async (request, response) => {
     title = 'Recently Played',
     width = 280,
     size = '800',
+    show_percent = '0'
   } = request.query
 
   const { data } = await axios.post(
@@ -51,6 +52,7 @@ export default async (request, response) => {
       },
     }
   )
+
   const songs = data[Number(type) === 1 ? 'weekData' : 'allData'].slice(0, Number(number))
 
   const buffers = await Promise.all(
@@ -67,12 +69,13 @@ export default async (request, response) => {
   })
 
   const templateParams = {
-    recentPlayed: songs.map(({ song }, i) => {
+    recentPlayed: songs.map(({ song, score }, i) => {
       return {
         name: song.name,
         artist: song.ar.map(({ name }) => name).join('/'),
         cover: covers[i],
         url: `https://music.163.com/#/song?id=${song.id}`,
+        percent: show_percent === '1' ? score / 100 : 0
       }
     }),
     themeConfig: { title, width: Number(width) },

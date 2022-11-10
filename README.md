@@ -5,7 +5,7 @@
 
 ## 🖥 前置工作
 
-获取网易云音乐用户 ID (https://music.163.com)
+获取网易云音乐用户 ID (<https://music.163.com>)
 
 - 您的个人主页页面（`https://music.163.com/#/user/home?id=xxx`），`id` 为紧跟的那串数字
 
@@ -84,7 +84,14 @@
 
 [![Netease recently played](https://netease-recent-profile.vercel.app/?id=126764012&size=60)](https://netease-recent-profile.vercel.app/?id=126764012&size=60)
 
+### 是否显示听歌次数对比百分比
+
+请传递 `show_percent` 为 `'1'`，即表示为打开此特性
+
+```md
+[![Netease recently played](https://netease-recent-profile.vercel.app/?id=126764012&show_percent=1)](https://netease-recent-profile.vercel.app/?id=126764012&show_percent=1)
+```
+
 ## 📄 开源协议
 
 本项目使用 [MIT](./LICENSE) 协议
-
