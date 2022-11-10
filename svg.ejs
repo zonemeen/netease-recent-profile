@@ -25,15 +25,15 @@ fontSizeLimit = function(text, fontSize, maxWidth){
 %>
 
 <svg
-        width="280"
+        width="<%= themeConfig.width %>"
         height="<%= (74+(recentPlayed.length-1)*42)*1.4 %>"
-        viewBox="0 0 280 <%= (74+(recentPlayed.length-1)*42)*1.4 %>"
+        viewBox="0 0 <%= themeConfig.width %> <%= (74+(recentPlayed.length-1)*42)*1.4 %>"
         fill="none"
         xmlns="http://www.w3.org/2000/svg"
         xmlns:xlink="http://www.w3.org/1999/xlink"
 >
-    <rect width="280" height="<%= (73+(recentPlayed.length-1)*42)*1.4 %>" rx="5.6" fill="#212121" />
-    <rect x="250" y="10" width="21" height="18.2" fill="url(#pattern-logo)" />
+    <rect width="<%= themeConfig.width %>" height="<%= (73+(recentPlayed.length-1)*42)*1.4 %>" rx="5.6" fill="#212121" />
+    <rect x="<%= themeConfig.width - 30 %>" y="10" width="21" height="18.2" fill="url(#pattern-logo)" />
 
     <text
             fill="white"
@@ -42,7 +42,7 @@ fontSizeLimit = function(text, fontSize, maxWidth){
             font-size="14"
             letter-spacing="0em"
     >
-  <tspan x="9" y="<%= 23.5 %>"><%= theme.title %></tspan>
+  <tspan x="10" y="<%= 23.5 %>"><%= themeConfig.title %></tspan>
 </text>
     <%
     for (const [index] of recentPlayed.entries()) {
@@ -51,7 +51,7 @@ fontSizeLimit = function(text, fontSize, maxWidth){
         <rect
                 x="8.4"
                 y="<%= (27+index*42)*1.4 %>"
-                width="263.2"
+                width="<%= themeConfig.width - 16.8 %>"
                 height="51.8"
                 rx="2.8"
                 fill="white"

@@ -18,17 +18,15 @@ const aesRsaEncrypt = (text) => ({
 })
 
 export default async (request, response) => {
-  const { id, type = '1', number = 5, title = 'Recently Played', size = '800', show_percent = '0' } = request.query
-
-  const imageToBase64 = (url) =>
-    axios
-      .get(`${url}${size !== '800' ? `?param=${size}x${size}` : ''}`, {
-        responseType: 'arraybuffer',
-      })
-      .then((response) => {
-        const buffer64 = Buffer.from(response.data, 'binary').toString('base64')
-        return `data:image/jpg;base64,` + buffer64
-      })
+  const {
+    id,
+    type = '1',
+    number = 5,
+    title = 'Recently Played',
+    width = 280,
+    size = '800',
+    show_percent = '0'
+  } = request.query
 
   const { data } = await axios.post(
     'https://music.163.com/weapi/v1/play/record?csrf_token=',
@@ -56,10 +54,19 @@ export default async (request, response) => {
   )
 
   const songs = data[Number(type) === 1 ? 'weekData' : 'allData'].slice(0, Number(number))
-  const getAllImages = (recentlyPlayedSongs) =>
-    Promise.all(recentlyPlayedSongs.map(({ song }) => imageToBase64(song.al.picUrl)))
 
-  const covers = await getAllImages(songs)
+  const buffers = await Promise.all(
+    songs.map(({ song }) =>
+      axios.get(`${song.al.picUrl}${size !== '800' ? `?param=${size}x${size}` : ''}`, {
+        responseType: 'arraybuffer',
+      })
+    )
+  )
+
+  const covers = buffers.map((buffer) => {
+    const buffer64 = Buffer.from(buffer.data, 'binary').toString('base64')
+    return `data:image/jpg;base64,` + buffer64
+  })
 
   const templateParams = {
     recentPlayed: songs.map(({ song, score }, i) => {
@@ -71,8 +78,9 @@ export default async (request, response) => {
         percent: show_percent === '1' ? score / 100 : 0
       }
     }),
-    theme: { title },
+    themeConfig: { title, width: Number(width) },
   }
+  response.setHeader('Cache-Control', 'public, max-age=14400')
   response.setHeader('content-type', 'image/svg+xml')
   response.statusCode = 200
   response.send(ejs.render(readTemplateFile(), templateParams))
