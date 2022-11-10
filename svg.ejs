@@ -77,7 +77,7 @@ fontSizeLimit = function(text, fontSize, maxWidth){
                 font-size="9.8"
                 letter-spacing="0em"
         >
-    <tspan x="60.2" y="<%= (54.258+index*42)*1.4 %>"><%= fontSizeLimit(recentPlayed[index].artist, 7, 220)  %></tspan>
+    <tspan x="60.2" y="<%= (54.258+index*42)*1.4 %>"><%= fontSizeLimit(recentPlayed[index].artist, 7, themeConfig.width - 60)  %></tspan>
         </text>
     </a>
     <%
