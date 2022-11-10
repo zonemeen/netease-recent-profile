@@ -13,7 +13,7 @@
 
 ## 🔨 使用
 
-获取账号id后，只需在你的README中添加以下内容，并将`id`查询参数设置为你的网易云音乐账号id
+获取账号 id 后，只需在你的 README 中添加以下内容，并将`id`查询参数设置为你的网易云音乐账号 id
 
 ```md
 [![Netease recently played](https://netease-recent-profile.vercel.app/?id=126764012)](https://netease-recent-profile.vercel.app/?id=126764012)
@@ -27,7 +27,7 @@
 
 请传递查询参数`type`，并将其设置为你想要的听歌排行类型
 
-- 近一周的听歌排行：默认type为 `1`
+- 近一周的听歌排行：默认 type 为 `1`
 - 所有时间的听歌排行：设为 `0`
 
 ```md
@@ -76,7 +76,7 @@
 
 请传递查询参数`size`，并将其设置为你想要的图片大小
 
-- 默认图片大小为 `800`，尺寸越小，优点是svg尺寸较小、请求返回的时间变短，缺点是图片会失真变模糊
+- 默认图片大小为 `800`，尺寸越小，优点是 svg 尺寸较小、请求返回的时间变短，缺点是图片会失真变模糊
 
 ```md
 [![Netease recently played](https://netease-recent-profile.vercel.app/?id=126764012&size=60)](https://netease-recent-profile.vercel.app/?id=126764012&size=60)
@@ -96,6 +96,15 @@
 ```
 
 [![Netease recently played](https://netease-recent-profile.vercel.app/?id=126764012&show_percent=1)](https://netease-recent-profile.vercel.app/?id=126764012&show_percent=1)
+
+### 设置缓存时间
+
+请传递查询参数 `cache`
+
+- 默认为 `14400 (即 4 小时)`，单位为秒
+
+> **注意：**
+> 这里使用缓存来减少服务器的负载及响应时间，其中缓存的最小值为 4 小时，最大值为 24 小时。
 
 ## 📄 开源协议
 
