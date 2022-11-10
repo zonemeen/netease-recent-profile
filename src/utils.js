@@ -25,4 +25,9 @@ const renderError = (message, secondaryMessage = '') => {
   `
 }
 
-export { renderError }
+const CONSTANTS = {
+  CACHE_FOUR_HOURS: 14400,
+  CACHE_ONE_DAY: 86400,
+}
+
+export { renderError, CONSTANTS }

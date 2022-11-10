@@ -3,7 +3,7 @@ import { resolve } from 'path'
 import crypto from 'crypto'
 import ejs from 'ejs'
 import axios from 'axios'
-import { renderError } from '../src/utils.js'
+import { CONSTANTS, renderError } from '../src/utils.js'
 
 const readTemplateFile = () => readFileSync(resolve('svg.ejs'), 'utf-8')
 
@@ -25,8 +25,9 @@ export default async (request, response) => {
     number = 5,
     title = 'Recently Played',
     width = 280,
-    size = '800',
+    size = 800,
     show_percent = '0',
+    cache = CONSTANTS.CACHE_FOUR_HOURS,
   } = request.query
 
   try {
@@ -82,7 +83,13 @@ export default async (request, response) => {
       }),
       themeConfig: { title, width: Number(width) },
     }
-    response.setHeader('Cache-Control', 'public, max-age=14400')
+    response.setHeader(
+      'Cache-Control',
+      `public, max-age=${Math.max(
+        CONSTANTS.CACHE_FOUR_HOURS,
+        Math.min(Number(cache), CONSTANTS.CACHE_ONE_DAY)
+      )}`
+    )
     response.setHeader('content-type', 'image/svg+xml')
     response.statusCode = 200
     response.send(ejs.render(readTemplateFile(), templateParams))
