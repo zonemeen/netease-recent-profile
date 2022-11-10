@@ -77,7 +77,7 @@
 请传递 `show_percent` 为 `'1'`，即表示为打开此特性
 
 ```md
-[![Netease recently played](https://netease-recent-profile.vercel.app/?id=126764012&size=60)](https://netease-recent-profile.vercel.app/?id=126764012&show_percent=1)
+[![Netease recently played](https://netease-recent-profile.vercel.app/?id=126764012&show_percent=1)](https://netease-recent-profile.vercel.app/?id=126764012&show_percent=1)
 ```
 
 ## 📄 开源协议
