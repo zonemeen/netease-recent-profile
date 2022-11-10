@@ -18,7 +18,14 @@ const aesRsaEncrypt = (text) => ({
 })
 
 export default async (request, response) => {
-  const { id, type = '1', number = 5, title = 'Recently Played', size = '800' } = request.query
+  const {
+    id,
+    type = '1',
+    number = 5,
+    title = 'Recently Played',
+    width = 280,
+    size = '800',
+  } = request.query
 
   const { data } = await axios.post(
     'https://music.163.com/weapi/v1/play/record?csrf_token=',
@@ -68,7 +75,7 @@ export default async (request, response) => {
         url: `https://music.163.com/#/song?id=${song.id}`,
       }
     }),
-    theme: { title },
+    themeConfig: { title, width: Number(width) },
   }
   response.setHeader('Cache-Control', 'public, max-age=14400')
   response.setHeader('content-type', 'image/svg+xml')
