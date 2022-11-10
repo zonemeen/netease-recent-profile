@@ -18,7 +18,7 @@ const aesRsaEncrypt = (text) => ({
 })
 
 export default async (request, response) => {
-  const { id, type = '1', number = 5, title = 'Recently Played', size = '800' } = request.query
+  const { id, type = '1', number = 5, title = 'Recently Played', size = '800', show_percent = '0' } = request.query
 
   const imageToBase64 = (url) =>
     axios
@@ -68,7 +68,7 @@ export default async (request, response) => {
         artist: song.ar.map(({ name }) => name).join('/'),
         cover: covers[i],
         url: `https://music.163.com/#/song?id=${song.id}`,
-        percent: score / 100
+        percent: show_percent === '1' ? score / 100 : 0
       }
     }),
     theme: { title },
