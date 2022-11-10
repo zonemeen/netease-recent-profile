@@ -86,11 +86,16 @@
 
 ### 是否显示听歌次数对比百分比
 
-请传递 `show_percent` 为 `'1'`，即表示为打开此特性
+请传递查询参数 `show_percent`
+
+- 默认为 `0`：即表示不打开此特性
+- 传入 `1`：即表示为打开此特性
 
 ```md
 [![Netease recently played](https://netease-recent-profile.vercel.app/?id=126764012&show_percent=1)](https://netease-recent-profile.vercel.app/?id=126764012&show_percent=1)
 ```
+
+[![Netease recently played](https://netease-recent-profile.vercel.app/?id=126764012&show_percent=1)](https://netease-recent-profile.vercel.app/?id=126764012&show_percent=1)
 
 ## 📄 开源协议
 
