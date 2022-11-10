@@ -6,5 +6,11 @@
   },
   "rewrites": [
     { "source": "/", "destination": "/api/index" }
+  ],
+  "redirects": [
+    {
+      "source": "/",
+      "destination": "https://github.com/zonemeen/netease-recent-profile"
+    }
   ]
 }
