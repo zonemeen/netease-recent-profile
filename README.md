@@ -60,7 +60,19 @@
 
 [![Netease recently played](https://netease-recent-profile.vercel.app/?id=126764012&title=最近在听)](https://netease-recent-profile.vercel.app/?id=126764012&title=最近在听)
 
-### 图片尺寸
+### 卡片宽度
+
+请传递查询参数`width`，并将其设置为你想要的卡片宽度
+
+- 默认宽度为 `280`
+
+```md
+[![Netease recently played](https://netease-recent-profile.vercel.app/?id=126764012&width=350)](https://netease-recent-profile.vercel.app/?id=126764012&width=350)
+```
+
+[![Netease recently played](https://netease-recent-profile.vercel.app/?id=126764012&width=350)](https://netease-recent-profile.vercel.app/?id=126764012&width=350)
+
+### 歌曲图片尺寸
 
 请传递查询参数`size`，并将其设置为你想要的图片大小
 
