@@ -11,6 +11,8 @@
 
 ![user_id](https://user-images.githubusercontent.com/44596995/200237164-bf3b1c62-b2ee-4569-b5bf-bda06b09db08.png)
 
+> 注意：要在网易云音乐个人设置-隐私设置中将听歌排行设为`所有人可见`
+
 ## 🔨 使用
 
 获取账号 id 后，只需在你的 README 中添加以下内容，并将`id`查询参数设置为你的网易云音乐账号 id
