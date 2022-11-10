@@ -70,6 +70,7 @@ export default async (request, response) => {
     }),
     theme: { title },
   }
+  response.setHeader('Cache-Control', 'public, max-age=14400')
   response.setHeader('content-type', 'image/svg+xml')
   response.statusCode = 200
   response.send(ejs.render(readTemplateFile(), templateParams))
