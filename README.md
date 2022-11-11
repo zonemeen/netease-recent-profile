@@ -108,6 +108,10 @@
 > **注意：**
 > 这里使用缓存来减少服务器的负载及响应时间，其中缓存的最小值为 4 小时，最大值为 24 小时。
 
+```md
+[![Netease recently played](https://netease-recent-profile.vercel.app/?id=126764012&cache=28800)](https://netease-recent-profile.vercel.app/?id=126764012&cache=28800)
+```
+
 ## 📄 开源协议
 
 本项目使用 [MIT](./LICENSE) 协议
