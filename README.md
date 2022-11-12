@@ -1,6 +1,6 @@
 <p align="center">
   <h2 align="center">Netease Recent Profile</h2>
-  <p align="center">🎧 将你的网易云音乐的听歌记录生成svg，由 <a target="_blank" href="https://vercel.com">Vercel</a> 驱动</p>
+  <p align="center">🎧 将你的网易云音乐听歌记录生成一张可配置卡片，由 <a target="_blank" href="https://vercel.com">Vercel</a> 驱动</p>
 </p>
 
 ## 🖥 前置工作
@@ -74,7 +74,7 @@
 
 [![Netease recently played](https://netease-recent-profile.vercel.app/?id=126764012&width=350)](https://netease-recent-profile.vercel.app/?id=126764012&width=350)
 
-### 歌曲图片尺寸
+### 歌曲图片大小
 
 请传递查询参数`size`，并将其设置为你想要的图片大小
 
