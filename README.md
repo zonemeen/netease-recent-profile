@@ -13,6 +13,23 @@
 
 > 注意：要在网易云音乐个人设置-隐私设置中将听歌排行设为`所有人可见`
 
+## 🚀 部署
+
+可以通过 Vercel 进行部署，或者部署到自己的服务器。
+
+具体方法如下：
+
+```shell
+git clone https://github.com/zonemeen/netease-recent-profile.git
+cd netease-recent-profile
+npm install
+node ./app.js
+# or
+pm2 start ./app.js --name netease-recent-profile
+```
+
+默认端口为 `3000`，可以通过设置 `PORT` 环境变量进行修改。
+
 ## 🔨 使用
 
 获取账号 id 后，只需在你的 README 中添加以下内容，并将`id`查询参数设置为你的网易云音乐账号 id
