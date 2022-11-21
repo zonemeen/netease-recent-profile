@@ -72,7 +72,7 @@ export default async (request, response) => {
     })
 
     const templateParams = {
-      recentPlayed: songs.map(({ song, score }, i) => {
+      recentPlayedList: songs.map(({ song, score }, i) => {
         return {
           name: song.name,
           artist: song.ar.map(({ name }) => name).join('/'),

@@ -24,19 +24,19 @@ fontSizeLimit = function(text, fontSize, maxWidth){
 }
 %>
 
-<svg width="<%= themeConfig.width %>" height="<%= (74+(recentPlayed.length-1)*42)*1.4 %>" viewBox="0 0 <%= themeConfig.width %> <%= (74+(recentPlayed.length-1)*42)*1.4 %>" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-  <rect width="<%= themeConfig.width %>" height="<%= (73+(recentPlayed.length-1)*42)*1.4 %>" rx="5.6" fill="#212121" />
+<svg width="<%= themeConfig.width %>" height="<%= (74+(recentPlayedList.length-1)*42)*1.4 %>" viewBox="0 0 <%= themeConfig.width %> <%= (74+(recentPlayedList.length-1)*42)*1.4 %>" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+  <rect width="<%= themeConfig.width %>" height="<%= (73+(recentPlayedList.length-1)*42)*1.4 %>" rx="5.6" fill="#212121" />
   <rect x="<%= themeConfig.width - 30 %>" y="10" width="21" height="18.2" fill="url(#pattern-logo)" />
 
   <text fill="white" xml:space="preserve" style="white-space: pre" font-size="14" letter-spacing="0em">
     <tspan x="10" y="<%= 23.5 %>"><%= themeConfig.title %></tspan>
   </text>
   <%
-    for (const [index, value] of recentPlayed.entries()) {
+    for (const [index, value] of recentPlayedList.entries()) {
   %>
   <a href="<%= value.url %>" target="_blank">
     <rect x="8.4" y="<%= (27+index*42)*1.4 %>" width="<%= themeConfig.width - 16.8 %>" height="51.8" rx="2.8" fill="white" fill-opacity="0.11" />
-    <rect x="8.4" y="<%= (27+index*42)*1.4 %>" width="<%= (263.2 * value.percent) %>" height="51.8" rx="2.8" fill="#4eb4f5" fill-opacity="0.11" />
+    <rect x="8.4" y="<%= (27+index*42)*1.4 %>" width="<%= (themeConfig.width - 16.8) * value.percent %>" height="51.8" rx="2.8" fill="#4eb4f5" fill-opacity="0.11" />
     <rect x="14" y="<%= (31+index*42)*1.4 %>" width="40.6" height="40.6" rx="2.8" fill="<%= `url(#pattern${index})` %>" />
     <text fill="white" xml:space="preserve" style="white-space: pre" font-size="11.2" letter-spacing="0em">
       <tspan x="60.2" y="<%= (42.844+index*42)*1.4 %>"><a id="netease" target="_blank" href="<%= value.url %>"><%= fontSizeLimit(value.name, 8, themeConfig.width - 60) %></a></tspan>
@@ -53,7 +53,7 @@ fontSizeLimit = function(text, fontSize, maxWidth){
       <use xlink:href="#image-logo" transform="translate(0 -0.00103455) scale(0.00129639 0.00141336)" />
     </pattern>
     <%
-      for (const [index] of recentPlayed.entries()) {
+      for (const [index] of recentPlayedList.entries()) {
     %>
     <pattern id="<%= `pattern${index}` %>" patternContentUnits="objectBoundingBox" width="1" height="1">
       <use xlink:href="<%= `#image${index}` %>" transform="scale(0.00333333)" />
@@ -62,7 +62,7 @@ fontSizeLimit = function(text, fontSize, maxWidth){
       }
     %>
     <%
-      for (const [index, value] of recentPlayed.entries()) {
+      for (const [index, value] of recentPlayedList.entries()) {
     %>
     <image id="<%= `image${index}` %>" width="300" height="300" xlink:href="<%= value.cover %>" />
     <%
