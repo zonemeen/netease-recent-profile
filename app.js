@@ -1,5 +1,4 @@
 import express from 'express'
-import http from 'http'
 import process from 'node:process'
 import indexController from './api/index.js'
 
@@ -7,6 +6,8 @@ const app = express()
 
 app.use('/', indexController)
 
-const server = http.createServer(app)
+const port = Number(process.env.PORT) || 3000
 
-server.listen(process.env.PORT || 3000)
+app.listen(port, () => {
+  console.log(`Running on http://localhost:${port}`)
+})
