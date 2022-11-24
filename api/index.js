@@ -1,11 +1,10 @@
 import { readFileSync } from 'fs'
-import { resolve } from 'path'
 import crypto from 'crypto'
 import ejs from 'ejs'
 import axios from 'axios'
 import { CONSTANTS, renderError } from '../src/utils.js'
 
-const readTemplateFile = () => readFileSync(resolve('svg.ejs'), 'utf-8')
+const readTemplateFile = () => readFileSync('svg.ejs', 'utf-8')
 
 const aesEncrypt = (secKey, text) => {
   const cipher = crypto.createCipheriv('AES-128-CBC', secKey, '0102030405060708')
@@ -18,19 +17,21 @@ const aesRsaEncrypt = (text) => ({
     '84ca47bca10bad09a6b04c5c927ef077d9b9f1e37098aa3eac6ea70eb59df0aa28b691b7e75e4f1f9831754919ea784c8f74fbfadf2898b0be17849fd656060162857830e241aba44991601f137624094c114ea8d17bce815b0cd4e5b8e2fbaba978c6d1d14dc3d1faf852bdd28818031ccdaaa13a6018e1024e2aae98844210',
 })
 
-export default async (request, response) => {
-  const {
-    id,
-    type = '1',
-    number = 5,
-    title = 'Recently Played',
-    width = 280,
-    size = 800,
-    show_percent = '0',
-    cache = CONSTANTS.CACHE_FOUR_HOURS,
-  } = request.query
-
+export default async (req, res) => {
   try {
+    const {
+      id,
+      type = '1',
+      number = 5,
+      title = 'Recently Played',
+      width = 280,
+      size = 800,
+      show_percent = '0',
+      cache = CONSTANTS.CACHE_FOUR_HOURS,
+    } = req.query
+
+    if (!id) throw new Error('Id is required')
+
     const { data } = await axios.post(
       'https://music.163.com/weapi/v1/play/record?csrf_token=',
       aesRsaEncrypt(
@@ -83,18 +84,18 @@ export default async (request, response) => {
       }),
       themeConfig: { title, width: Number(width) },
     }
-    response.setHeader(
+    res.setHeader(
       'Cache-Control',
       `public, max-age=${Math.max(
         CONSTANTS.CACHE_FOUR_HOURS,
         Math.min(Number(cache), CONSTANTS.CACHE_ONE_DAY)
       )}`
     )
-    response.setHeader('content-type', 'image/svg+xml')
-    response.statusCode = 200
-    response.send(ejs.render(readTemplateFile(), templateParams))
+    res.setHeader('content-type', 'image/svg+xml')
+    res.statusCode = 200
+    res.send(ejs.render(readTemplateFile(), templateParams))
   } catch (err) {
-    response.setHeader('Cache-Control', `no-cache, no-store, must-revalidate`)
-    return response.send(renderError(err.message, err.secondaryMessage))
+    res.setHeader('Cache-Control', `no-cache, no-store, must-revalidate`)
+    return res.send(renderError(err.message, err.secondaryMessage))
   }
 }

@@ -4,6 +4,7 @@
   "description": "Generates a beautiful Netease Cloud Music status for github profiles",
   "type": "module",
   "scripts": {
+    "dev": "node app.js",
     "start": "vercel dev",
     "deploy": "vercel --prod",
     "prepare": "husky install"
@@ -26,7 +27,8 @@
   "devDependencies": {
     "husky": "^8.0.2",
     "lint-staged": "^13.0.3",
-    "prettier": "^2.7.1"
+    "prettier": "^2.7.1",
+    "vercel": "^28.5.6"
   },
   "dependencies": {
     "axios": "^1.1.3",
