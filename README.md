@@ -62,9 +62,9 @@
 
 [![Netease recently played](https://netease-recent-profile.vercel.app/?id=126764012&title=最近在听)](https://netease-recent-profile.vercel.app/?id=126764012&title=最近在听)
 
-### 卡片宽度
+### 卡片单列宽度
 
-请传递查询参数`width`，并将其设置为你想要的卡片宽度
+请传递查询参数`width`，并将其设置为你想要的卡片单列宽度
 
 - 默认宽度为 `280`
 
