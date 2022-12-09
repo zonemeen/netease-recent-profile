@@ -81,10 +81,10 @@
 - 默认列数为 `1`
 
 ```md
-[![Netease recently played](https://netease-recent-profile.vercel.app/?id=126764012&number=6&column=2)](https://netease-recent-profile.vercel.app/?id=126764012&number=6&column=2)
+[![Netease recently played](https://netease-recent-profile.vercel.app/?id=126764012&number=10&column=2)](https://netease-recent-profile.vercel.app/?id=126764012&number=10&column=2)
 ```
 
-[![Netease recently played](https://netease-recent-profile.vercel.app/?id=126764012&number=6&column=2)](https://netease-recent-profile.vercel.app/?id=126764012&number=6&column=2)
+[![Netease recently played](https://netease-recent-profile.vercel.app/?id=126764012&number=10&column=2)](https://netease-recent-profile.vercel.app/?id=126764012&number=10&column=2)
 
 ### 歌曲图片大小
 
