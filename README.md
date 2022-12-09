@@ -72,6 +72,8 @@
 [![Netease recently played](https://netease-recent-profile.vercel.app/?id=126764012&width=350)](https://netease-recent-profile.vercel.app/?id=126764012&width=350)
 ```
 
+[![Netease recently played](https://netease-recent-profile.vercel.app/?id=126764012&width=350)](https://netease-recent-profile.vercel.app/?id=126764012&width=350)
+
 ### 列数
 
 请传递查询参数`column`，并将其设置为你想要的列数
