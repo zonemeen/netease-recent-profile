@@ -22,11 +22,12 @@ export default async (req, res) => {
     const {
       id,
       type = '1',
-      number = 5,
-      title = 'Recently Played',
-      width = 280,
-      size = 800,
+      number = '5',
+      width = '280',
+      size = '800',
+      column = '1',
       show_percent = '0',
+      title = 'Recently Played',
       cache = CONSTANTS.CACHE_FOUR_HOURS,
     } = req.query
 
@@ -57,7 +58,7 @@ export default async (req, res) => {
       }
     )
 
-    const songs = data[Number(type) === 1 ? 'weekData' : 'allData'].slice(0, Number(number))
+    const songs = data[parseInt(type) === 1 ? 'weekData' : 'allData'].slice(0, parseInt(number))
 
     const buffers = await Promise.all(
       songs.map(({ song }) =>
@@ -82,13 +83,13 @@ export default async (req, res) => {
           percent: show_percent === '1' ? score / 100 : 0,
         }
       }),
-      themeConfig: { title, width: Number(width) },
+      themeConfig: { title, width: parseInt(width), column: parseInt(column) },
     }
     res.setHeader(
       'Cache-Control',
       `public, max-age=${Math.max(
         CONSTANTS.CACHE_FOUR_HOURS,
-        Math.min(Number(cache), CONSTANTS.CACHE_ONE_DAY)
+        Math.min(parseInt(cache), CONSTANTS.CACHE_ONE_DAY)
       )}`
     )
     res.setHeader('content-type', 'image/svg+xml')
