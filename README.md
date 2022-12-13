@@ -23,6 +23,12 @@
 
 [![Netease recently played](https://netease-recent-profile.vercel.app/?id=126764012)](https://netease-recent-profile.vercel.app/?id=126764012)
 
+如果你想将卡片嵌在你的网页中，也可以这样使用：
+
+```md
+<img src="https://netease-recent-profile.vercel.app/?id=126764012" alt="Netease recently played" title="Netease recently played">
+```
+
 ## ⚙ 自定义配置
 
 ### 听歌排行类型
