@@ -38,6 +38,19 @@
 
 [![Netease recently played](https://netease-recent-profile.vercel.app/?id=126764012&type=0)](https://netease-recent-profile.vercel.app/?id=126764012&type=0)
 
+### 是否显示听歌次数对比百分比
+
+请传递查询参数 `show_percent`
+
+- 默认为 `0`：即表示不打开此特性
+- 传入 `1`：即表示为打开此特性
+
+```md
+[![Netease recently played](https://netease-recent-profile.vercel.app/?id=126764012&show_percent=1)](https://netease-recent-profile.vercel.app/?id=126764012&show_percent=1)
+```
+
+[![Netease recently played](https://netease-recent-profile.vercel.app/?id=126764012&show_percent=1)](https://netease-recent-profile.vercel.app/?id=126764012&show_percent=1)
+
 ### 歌曲数量
 
 请传递查询参数`number`，并将其设置为你想要的歌曲数量
@@ -97,19 +110,6 @@
 ```
 
 [![Netease recently played](https://netease-recent-profile.vercel.app/?id=126764012&size=60)](https://netease-recent-profile.vercel.app/?id=126764012&size=60)
-
-### 是否显示听歌次数对比百分比
-
-请传递查询参数 `show_percent`
-
-- 默认为 `0`：即表示不打开此特性
-- 传入 `1`：即表示为打开此特性
-
-```md
-[![Netease recently played](https://netease-recent-profile.vercel.app/?id=126764012&show_percent=1)](https://netease-recent-profile.vercel.app/?id=126764012&show_percent=1)
-```
-
-[![Netease recently played](https://netease-recent-profile.vercel.app/?id=126764012&show_percent=1)](https://netease-recent-profile.vercel.app/?id=126764012&show_percent=1)
 
 ### 设置缓存时间
 
