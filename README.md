@@ -23,6 +23,12 @@
 
 [![Netease recently played](https://netease-recent-profile.vercel.app/?id=126764012)](https://netease-recent-profile.vercel.app/?id=126764012)
 
+如果你想将卡片嵌在你的网页中，也可以这样使用：
+
+```md
+<img src="https://netease-recent-profile.vercel.app/?id=126764012" alt="Netease recently played" title="Netease recently played">
+```
+
 ## ⚙ 自定义配置
 
 ### 听歌排行类型
@@ -37,6 +43,19 @@
 ```
 
 [![Netease recently played](https://netease-recent-profile.vercel.app/?id=126764012&type=0)](https://netease-recent-profile.vercel.app/?id=126764012&type=0)
+
+### 是否显示听歌次数对比百分比
+
+请传递查询参数 `show_percent`
+
+- 默认为 `0`：即表示不打开此特性
+- 传入 `1`：即表示为打开此特性
+
+```md
+[![Netease recently played](https://netease-recent-profile.vercel.app/?id=126764012&show_percent=1)](https://netease-recent-profile.vercel.app/?id=126764012&show_percent=1)
+```
+
+[![Netease recently played](https://netease-recent-profile.vercel.app/?id=126764012&show_percent=1)](https://netease-recent-profile.vercel.app/?id=126764012&show_percent=1)
 
 ### 歌曲数量
 
@@ -81,10 +100,10 @@
 - 默认列数为 `1`
 
 ```md
-[![Netease recently played](https://netease-recent-profile.vercel.app/?id=126764012&number=6&column=2)](https://netease-recent-profile.vercel.app/?id=126764012&number=6&column=2)
+[![Netease recently played](https://netease-recent-profile.vercel.app/?id=126764012&number=10&column=2)](https://netease-recent-profile.vercel.app/?id=126764012&number=10&column=2)
 ```
 
-[![Netease recently played](https://netease-recent-profile.vercel.app/?id=126764012&number=6&column=2)](https://netease-recent-profile.vercel.app/?id=126764012&number=6&column=2)
+[![Netease recently played](https://netease-recent-profile.vercel.app/?id=126764012&number=10&column=2)](https://netease-recent-profile.vercel.app/?id=126764012&number=10&column=2)
 
 ### 歌曲图片大小
 
@@ -97,19 +116,6 @@
 ```
 
 [![Netease recently played](https://netease-recent-profile.vercel.app/?id=126764012&size=60)](https://netease-recent-profile.vercel.app/?id=126764012&size=60)
-
-### 是否显示听歌次数对比百分比
-
-请传递查询参数 `show_percent`
-
-- 默认为 `0`：即表示不打开此特性
-- 传入 `1`：即表示为打开此特性
-
-```md
-[![Netease recently played](https://netease-recent-profile.vercel.app/?id=126764012&show_percent=1)](https://netease-recent-profile.vercel.app/?id=126764012&show_percent=1)
-```
-
-[![Netease recently played](https://netease-recent-profile.vercel.app/?id=126764012&show_percent=1)](https://netease-recent-profile.vercel.app/?id=126764012&show_percent=1)
 
 ### 设置缓存时间
 
