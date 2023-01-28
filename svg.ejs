@@ -7,7 +7,7 @@ fontSizeLimit = function(text, fontSize, maxWidth){
         if(char === ' ' || /^\d+$/.test(char))
             totalWidth += fontSize * 0.7;
         // if its thin character
-        else if(char.toLowerCase() === 'i' || char === 'f' || char === 'l' || char === 'j' || char === 'r' || char === 't' || char === '"' || char === "'" || char === '(' || char === ')' || char === ',' || char === '-' || char === '.')
+        else if(char.toLowerCase() === 'i' || char === 'f' || char === 'l' || char === 'j' || char === 'r' || char === 't' || char === '"' || char === "'" || char === '(' || char === ')' || char === '[' || char === ']' || char === ',' || char === '-' || char === '.')
             totalWidth += fontSize * 0.3;
         // if it's uppercase
         else if(char === char.toUpperCase())
