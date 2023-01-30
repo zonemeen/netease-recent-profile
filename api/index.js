@@ -32,7 +32,7 @@ export default async (req, res) => {
       size = '800',
       column = '1',
       show_percent = '0',
-      title = 'Recently Played',
+      title,
       cache = CONSTANTS.CACHE_FOUR_HOURS,
     } = req.query
 
@@ -78,9 +78,11 @@ export default async (req, res) => {
       return `data:image/jpg;base64,` + buffer64
     })
 
-    let language = req.acceptsLanguages()[0]
-    if (language) {
-      title = titleTranslates[language] || title
+    if (!title) {
+      let language = req.acceptsLanguages()[0]
+      if (language) {
+        title = titleTranslates[language] || 'Recently Played'
+      }
     }
 
     const templateParams = {
