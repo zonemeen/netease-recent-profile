@@ -17,9 +17,14 @@ const aesRsaEncrypt = (text) => ({
     '84ca47bca10bad09a6b04c5c927ef077d9b9f1e37098aa3eac6ea70eb59df0aa28b691b7e75e4f1f9831754919ea784c8f74fbfadf2898b0be17849fd656060162857830e241aba44991601f137624094c114ea8d17bce815b0cd4e5b8e2fbaba978c6d1d14dc3d1faf852bdd28818031ccdaaa13a6018e1024e2aae98844210',
 })
 
+const titleTranslates = {
+  zh: '最近播放',
+  'zh-CN': '最近播放',
+}
+
 export default async (req, res) => {
   try {
-    const {
+    let {
       id,
       type = '1',
       number = '5',
@@ -72,6 +77,11 @@ export default async (req, res) => {
       const buffer64 = Buffer.from(buffer.data, 'binary').toString('base64')
       return `data:image/jpg;base64,` + buffer64
     })
+
+    let language = req.acceptsLanguages()[0]
+    if (language) {
+      title = titleTranslates[language] || title
+    }
 
     const templateParams = {
       recentPlayedList: songs.map(({ song, score }, i) => {
