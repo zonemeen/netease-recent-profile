@@ -21,7 +21,7 @@
 [![Netease recently played](https://netease-recent-profile.vercel.app/?id=126764012)](https://netease-recent-profile.vercel.app/?id=126764012)
 ```
 
-[![Netease recently played](https://netease-recent-profile.vercel.app/?id=126764012)](https://netease-recent-profile.vercel.app/?id=126764012)
+[![Netease recently played](https://netease-recent-profile.vercel.app/?id=126764012&size=60)](https://netease-recent-profile.vercel.app/?id=126764012&size=60)
 
 如果你想将卡片嵌在你的网页中，也可以这样使用：
 
@@ -42,7 +42,7 @@
 [![Netease recently played](https://netease-recent-profile.vercel.app/?id=126764012&type=0)](https://netease-recent-profile.vercel.app/?id=126764012&type=0)
 ```
 
-[![Netease recently played](https://netease-recent-profile.vercel.app/?id=126764012&type=0)](https://netease-recent-profile.vercel.app/?id=126764012&type=0)
+[![Netease recently played](https://netease-recent-profile.vercel.app/?id=126764012&type=0&size=60)](https://netease-recent-profile.vercel.app/?id=126764012&type=0&size=60)
 
 ### 是否显示听歌次数对比百分比
 
@@ -55,7 +55,7 @@
 [![Netease recently played](https://netease-recent-profile.vercel.app/?id=126764012&show_percent=1)](https://netease-recent-profile.vercel.app/?id=126764012&show_percent=1)
 ```
 
-[![Netease recently played](https://netease-recent-profile.vercel.app/?id=126764012&show_percent=1)](https://netease-recent-profile.vercel.app/?id=126764012&show_percent=1)
+[![Netease recently played](https://netease-recent-profile.vercel.app/?id=126764012&show_percent=1&size=60)](https://netease-recent-profile.vercel.app/?id=126764012&show_percent=1&size=60)
 
 ### 歌曲数量
 
@@ -67,7 +67,7 @@
 [![Netease recently played](https://netease-recent-profile.vercel.app/?id=126764012&number=3)](https://netease-recent-profile.vercel.app/?id=126764012&number=3)
 ```
 
-[![Netease recently played](https://netease-recent-profile.vercel.app/?id=126764012&number=3)](https://netease-recent-profile.vercel.app/?id=126764012&number=3)
+[![Netease recently played](https://netease-recent-profile.vercel.app/?id=126764012&number=3&size=60)](https://netease-recent-profile.vercel.app/?id=126764012&number=3&size=60)
 
 ### 标题
 
@@ -79,7 +79,7 @@
 [![Netease recently played](https://netease-recent-profile.vercel.app/?id=126764012&title=最近在听)](https://netease-recent-profile.vercel.app/?id=126764012&title=最近在听)
 ```
 
-[![Netease recently played](https://netease-recent-profile.vercel.app/?id=126764012&title=最近在听)](https://netease-recent-profile.vercel.app/?id=126764012&title=最近在听)
+[![Netease recently played](https://netease-recent-profile.vercel.app/?id=126764012&title=最近在听&size=60)](https://netease-recent-profile.vercel.app/?id=126764012&title=最近在听&size=60)
 
 ### 卡片单列宽度
 
@@ -91,7 +91,7 @@
 [![Netease recently played](https://netease-recent-profile.vercel.app/?id=126764012&width=350)](https://netease-recent-profile.vercel.app/?id=126764012&width=350)
 ```
 
-[![Netease recently played](https://netease-recent-profile.vercel.app/?id=126764012&width=350)](https://netease-recent-profile.vercel.app/?id=126764012&width=350)
+[![Netease recently played](https://netease-recent-profile.vercel.app/?id=126764012&width=350&size=60)](https://netease-recent-profile.vercel.app/?id=126764012&width=350&size=60)
 
 ### 列数
 
@@ -100,10 +100,10 @@
 - 默认列数为 `1`
 
 ```md
-[![Netease recently played](https://netease-recent-profile.vercel.app/?id=126764012&number=10&column=2)](https://netease-recent-profile.vercel.app/?id=126764012&number=10&column=2)
+[![Netease recently played](https://netease-recent-profile.vercel.app/?id=126764012&number=8&column=2)](https://netease-recent-profile.vercel.app/?id=126764012&number=8&column=2)
 ```
 
-[![Netease recently played](https://netease-recent-profile.vercel.app/?id=126764012&number=10&column=2)](https://netease-recent-profile.vercel.app/?id=126764012&number=10&column=2)
+[![Netease recently played](https://netease-recent-profile.vercel.app/?id=126764012&number=8&column=2&size=60)](https://netease-recent-profile.vercel.app/?id=126764012&number=8&column=2&size=60)
 
 ### 歌曲图片大小
 
@@ -127,7 +127,7 @@
 > 这里使用缓存来减少服务器的负载及响应时间，其中缓存的最小值为 4 小时，最大值为 24 小时。
 
 ```md
-[![Netease recently played](https://netease-recent-profile.vercel.app/?id=126764012&cache=28800)](https://netease-recent-profile.vercel.app/?id=126764012&cache=28800)
+[![Netease recently played](https://netease-recent-profile.vercel.app/?id=126764012&cache=28800&size=60)](https://netease-recent-profile.vercel.app/?id=126764012&cache=28800&size=60)
 ```
 
 ## 🚀 部署
