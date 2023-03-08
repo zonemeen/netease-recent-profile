@@ -57,6 +57,19 @@
 
 [![Netease recently played](https://netease-recent-profile.vercel.app/?id=126764012&show_percent=1&size=60)](https://netease-recent-profile.vercel.app/?id=126764012&show_percent=1&size=60)
 
+### 主题模式
+
+请传递查询参数`theme`
+
+- 默认为 `dark`：即暗夜模式
+- 传入 `light`：即浅色模式
+
+```md
+[![Netease recently played](https://netease-recent-profile.vercel.app/?id=126764012&theme=light)](https://netease-recent-profile.vercel.app/?id=126764012&theme=light)
+```
+
+[![Netease recently played](https://netease-recent-profile.vercel.app/?id=126764012&theme=light&size=60)](https://netease-recent-profile.vercel.app/?id=126764012&theme=light&size=60)
+
 ### 歌曲数量
 
 请传递查询参数`number`，并将其设置为你想要的歌曲数量
