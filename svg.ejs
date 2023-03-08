@@ -25,9 +25,9 @@ fontSizeLimit = function(text, fontSize, maxWidth){
 %>
 
 <svg width="<%= themeConfig.width*themeConfig.column - 8.4*(themeConfig.column-1) %>" height="<%= (74+(Math.ceil(recentPlayedList.length/themeConfig.column)-1)*42)*1.4 %>" viewBox="0 0 <%= themeConfig.width*themeConfig.column - 8.4*(themeConfig.column-1) %> <%= (74+(Math.ceil(recentPlayedList.length/themeConfig.column)-1)*42)*1.4 %>" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-  <rect width="<%= themeConfig.width*themeConfig.column - 8.4*(themeConfig.column-1) %>" height="<%= (73+(Math.ceil(recentPlayedList.length/themeConfig.column)-1)*42)*1.4 %>" rx="5.6" fill="#212121" />
+  <rect width="<%= themeConfig.width*themeConfig.column - 8.4*(themeConfig.column-1) %>" height="<%= (73+(Math.ceil(recentPlayedList.length/themeConfig.column)-1)*42)*1.4 %>" rx="5.6" fill="<%= themeConfig.color.bgColor %>" />
   <rect x="<%= themeConfig.width*themeConfig.column - 30 - 8.4*(themeConfig.column-1) %>" y="10" width="21" height="18.2" fill="url(#pattern-logo)" />
-  <text fill="white" xml:space="preserve" style="white-space: pre" font-size="14" letter-spacing="0em">
+  <text fill="<%= themeConfig.color.fontColor %>" xml:space="preserve" style="white-space: pre" font-size="14" letter-spacing="0em">
     <tspan x="10" y="<%= 23.5 %>"><%= themeConfig.title %></tspan>
   </text>
   <%
@@ -36,13 +36,13 @@ fontSizeLimit = function(text, fontSize, maxWidth){
         const row = Math.floor(index/themeConfig.column)
     %>
   <a href="<%= value.url %>" target="_blank">
-    <rect x="<%= ceil*themeConfig.width + (8.4 - 8.4*ceil) %>" y="<%= (27+42*row)*1.4 %>" width="<%= themeConfig.width - 16.8 %>" height="51.8" rx="2.8" fill="white" fill-opacity="0.11" />
+    <rect x="<%= ceil*themeConfig.width + (8.4 - 8.4*ceil) %>" y="<%= (27+42*row)*1.4 %>" width="<%= themeConfig.width - 16.8 %>" height="51.8" rx="2.8" fill="<%= themeConfig.color.itemBgColor %>" fill-opacity="0.11" />
     <rect x="<%= ceil*themeConfig.width + (8.4 - 8.4*ceil) %>" y="<%= (27+42*row)*1.4 %>" width="<%= (themeConfig.width - 16.8) * value.percent %>" height="51.8" rx="2.8" fill="#4eb4f5" fill-opacity="0.11" />
     <rect x="<%= ceil*themeConfig.width + (14 - 8.4*ceil) %>" y="<%= (31+42*row)*1.4 %>" width="40.6" height="40.6" rx="2.8" fill="<%= `url(#pattern${index})` %>" />
-    <text fill="white" xml:space="preserve" style="white-space: pre" font-size="11.2" letter-spacing="0em">
+    <text fill="<%= themeConfig.color.fontColor %>" xml:space="preserve" style="white-space: pre" font-size="11.2" letter-spacing="0em">
       <tspan x="<%= ceil*themeConfig.width + (60.2 - 8.4*ceil) %>" y="<%= (42.844+42*row)*1.4 %>"><a id="netease" target="_blank" href="<%= value.url %>"><%= fontSizeLimit(value.name, 8, themeConfig.width - 55) %></a></tspan>
     </text>
-    <text fill="white" fill-opacity="0.66" xml:space="preserve" style="white-space: pre" font-size="9.8" letter-spacing="0em">
+    <text fill="<%= themeConfig.color.fontColor %>" fill-opacity="0.66" xml:space="preserve" style="white-space: pre" font-size="9.8" letter-spacing="0em">
       <tspan x="<%= ceil*themeConfig.width + (60.2 - 8.4*ceil) %>" y="<%= (54.258+42*row)*1.4 %>"><%= fontSizeLimit(value.artist, 7, themeConfig.width - 55)  %></tspan>
     </text>
   </a>
@@ -77,10 +77,6 @@ fontSizeLimit = function(text, fontSize, maxWidth){
 
       text {
         font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Helvetica, Arial, sans-serif, Apple Color Emoji, Segoe UI Emoji;
-      }
-
-      svg #netease {
-        fill: #ffffff;
       }
 
       svg #netease:hover {

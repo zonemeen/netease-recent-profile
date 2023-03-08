@@ -26,6 +26,7 @@ export default async (req, res) => {
       width = '280',
       size = '800',
       column = '1',
+      theme = 'dark',
       show_percent = '0',
       title = 'Recently Played',
       cache = CONSTANTS.CACHE_FOUR_HOURS,
@@ -83,7 +84,15 @@ export default async (req, res) => {
           percent: show_percent === '1' ? score / 100 : 0,
         }
       }),
-      themeConfig: { title, width: parseInt(width), column: parseInt(column) },
+      themeConfig: {
+        title,
+        width: parseInt(width),
+        column: parseInt(column),
+        color:
+          theme === 'light'
+            ? { bgColor: '#f6f8fa', fontColor: '#161b22', itemBgColor: '#000000' }
+            : { bgColor: '#212121', fontColor: '#f4f4f4', itemBgColor: '#ffffff' },
+      },
     }
     res.setHeader(
       'Cache-Control',
