@@ -88,6 +88,7 @@ export default async (req, res) => {
         title,
         width: parseInt(width),
         column: parseInt(column),
+        theme,
         color:
           theme === 'light'
             ? { bgColor: '#f6f8fa', fontColor: '#161b22', itemBgColor: '#000000' }
