@@ -17,8 +17,10 @@
 
 获取账号 id 后，只需在你的 README 中添加以下内容，并将`id`查询参数设置为你的网易云音乐账号 id
 
+由于 `Vercel` 的限制，所有图片汇总返回过大会报错，所以后面的示例图片的 `size` 都为60，保证可以访问
+
 ```md
-[![Netease recently played](https://netease-recent-profile.vercel.app/?id=126764012)](https://netease-recent-profile.vercel.app/?id=126764012)
+[![Netease recently played](https://netease-recent-profile.vercel.app/?id=126764012&size=60)](https://netease-recent-profile.vercel.app/?id=126764012&size=60)
 ```
 
 [![Netease recently played](https://netease-recent-profile.vercel.app/?id=126764012&size=60)](https://netease-recent-profile.vercel.app/?id=126764012&size=60)
@@ -26,7 +28,7 @@
 如果你想将卡片嵌在你的网页中，也可以这样使用：
 
 ```md
-<img src="https://netease-recent-profile.vercel.app/?id=126764012" alt="Netease recently played" title="Netease recently played">
+<img src="https://netease-recent-profile.vercel.app/?id=126764012&size=60" alt="Netease recently played" title="Netease recently played">
 ```
 
 ## ⚙ 自定义配置
@@ -39,7 +41,7 @@
 - 所有时间的听歌排行：设为 `0`
 
 ```md
-[![Netease recently played](https://netease-recent-profile.vercel.app/?id=126764012&type=0)](https://netease-recent-profile.vercel.app/?id=126764012&type=0)
+[![Netease recently played](https://netease-recent-profile.vercel.app/?id=126764012&type=0&size=60)](https://netease-recent-profile.vercel.app/?id=126764012&type=0&size=60)
 ```
 
 [![Netease recently played](https://netease-recent-profile.vercel.app/?id=126764012&type=0&size=60)](https://netease-recent-profile.vercel.app/?id=126764012&type=0&size=60)
@@ -52,7 +54,7 @@
 - 传入 `1`：即表示为打开此特性
 
 ```md
-[![Netease recently played](https://netease-recent-profile.vercel.app/?id=126764012&show_percent=1)](https://netease-recent-profile.vercel.app/?id=126764012&show_percent=1)
+[![Netease recently played](https://netease-recent-profile.vercel.app/?id=126764012&show_percent=1&size=60)](https://netease-recent-profile.vercel.app/?id=126764012&show_percent=1&size=60)
 ```
 
 [![Netease recently played](https://netease-recent-profile.vercel.app/?id=126764012&show_percent=1&size=60)](https://netease-recent-profile.vercel.app/?id=126764012&show_percent=1&size=60)
@@ -65,7 +67,7 @@
 - 传入 `light`：即浅色模式
 
 ```md
-[![Netease recently played](https://netease-recent-profile.vercel.app/?id=126764012&theme=light)](https://netease-recent-profile.vercel.app/?id=126764012&theme=light)
+[![Netease recently played](https://netease-recent-profile.vercel.app/?id=126764012&theme=light&size=60)](https://netease-recent-profile.vercel.app/?id=126764012&theme=light&size=60)
 ```
 
 [![Netease recently played](https://netease-recent-profile.vercel.app/?id=126764012&theme=light&size=60)](https://netease-recent-profile.vercel.app/?id=126764012&theme=light&size=60)
@@ -77,7 +79,7 @@
 - 默认为 `5` 条
 
 ```md
-[![Netease recently played](https://netease-recent-profile.vercel.app/?id=126764012&number=3)](https://netease-recent-profile.vercel.app/?id=126764012&number=3)
+[![Netease recently played](https://netease-recent-profile.vercel.app/?id=126764012&number=3&size=60)](https://netease-recent-profile.vercel.app/?id=126764012&number=3&size=60)
 ```
 
 [![Netease recently played](https://netease-recent-profile.vercel.app/?id=126764012&number=3&size=60)](https://netease-recent-profile.vercel.app/?id=126764012&number=3&size=60)
@@ -89,7 +91,7 @@
 - 默认标题为 `Recently Played`
 
 ```md
-[![Netease recently played](https://netease-recent-profile.vercel.app/?id=126764012&title=最近在听)](https://netease-recent-profile.vercel.app/?id=126764012&title=最近在听)
+[![Netease recently played](https://netease-recent-profile.vercel.app/?id=126764012&title=最近在听&size=60)](https://netease-recent-profile.vercel.app/?id=126764012&title=最近在听&size=60)
 ```
 
 [![Netease recently played](https://netease-recent-profile.vercel.app/?id=126764012&title=最近在听&size=60)](https://netease-recent-profile.vercel.app/?id=126764012&title=最近在听&size=60)
@@ -101,7 +103,7 @@
 - 默认宽度为 `280`
 
 ```md
-[![Netease recently played](https://netease-recent-profile.vercel.app/?id=126764012&width=350)](https://netease-recent-profile.vercel.app/?id=126764012&width=350)
+[![Netease recently played](https://netease-recent-profile.vercel.app/?id=126764012&width=350&size=60)](https://netease-recent-profile.vercel.app/?id=126764012&width=350&size=60)
 ```
 
 [![Netease recently played](https://netease-recent-profile.vercel.app/?id=126764012&width=350&size=60)](https://netease-recent-profile.vercel.app/?id=126764012&width=350&size=60)
@@ -113,7 +115,7 @@
 - 默认列数为 `1`
 
 ```md
-[![Netease recently played](https://netease-recent-profile.vercel.app/?id=126764012&number=8&column=2)](https://netease-recent-profile.vercel.app/?id=126764012&number=8&column=2)
+[![Netease recently played](https://netease-recent-profile.vercel.app/?id=126764012&number=8&column=2&size=60)](https://netease-recent-profile.vercel.app/?id=126764012&number=8&column=2&size=60)
 ```
 
 [![Netease recently played](https://netease-recent-profile.vercel.app/?id=126764012&number=8&column=2&size=60)](https://netease-recent-profile.vercel.app/?id=126764012&number=8&column=2&size=60)
