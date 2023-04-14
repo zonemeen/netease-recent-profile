@@ -19,7 +19,7 @@ const aesRsaEncrypt = (text) => ({
 
 export default async (req, res) => {
   try {
-    const {
+    let {
       id,
       type = '1',
       number = '5',
@@ -60,6 +60,8 @@ export default async (req, res) => {
     )
 
     const songs = data[parseInt(type) === 1 ? 'weekData' : 'allData'].slice(0, parseInt(number))
+
+    if (!songs.length) title = 'Not Played Recently'
 
     const buffers = await Promise.all(
       songs.map(({ song }) =>
