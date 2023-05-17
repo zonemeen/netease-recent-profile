@@ -64,7 +64,7 @@ export default async (req, res) => {
       }
     )
 
-    const songs = weekData?.slice(0, parseInt(number)) ?? allData?.slice(0, parseInt(number))
+    const songs = (weekData ?? allData).slice(0, parseInt(number))
 
     if (!songs.length) title = 'Not Played Recently'
 
