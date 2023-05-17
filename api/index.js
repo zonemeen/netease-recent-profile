@@ -1,10 +1,13 @@
-import { readFileSync } from 'fs'
-import crypto from 'crypto'
+import { readFileSync } from 'node:fs'
+import { fileURLToPath } from 'node:url'
+import crypto from 'node:crypto'
+import path from 'node:path'
 import ejs from 'ejs'
 import axios from 'axios'
 import { CONSTANTS, renderError } from '../src/utils.js'
 
-const readTemplateFile = () => readFileSync('svg.ejs', 'utf-8')
+const __dirname = path.dirname(fileURLToPath(import.meta.url))
+const readTemplateFile = () => readFileSync(path.resolve(__dirname, '../svg.ejs'), 'utf-8')
 
 const aesEncrypt = (secKey, text) => {
   const cipher = crypto.createCipheriv('AES-128-CBC', secKey, '0102030405060708')
@@ -34,7 +37,9 @@ export default async (req, res) => {
 
     if (!id) throw new Error('Id is required')
 
-    const { data } = await axios.post(
+    const {
+      data: { weekData, allData },
+    } = await axios.post(
       'https://music.163.com/weapi/v1/play/record?csrf_token=',
       aesRsaEncrypt(
         JSON.stringify({
@@ -59,7 +64,7 @@ export default async (req, res) => {
       }
     )
 
-    const songs = data[parseInt(type) === 1 ? 'weekData' : 'allData'].slice(0, parseInt(number))
+    const songs = weekData?.slice(0, parseInt(number)) ?? allData?.slice(0, parseInt(number))
 
     if (!songs.length) title = 'Not Played Recently'
 
