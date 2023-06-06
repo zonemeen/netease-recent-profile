@@ -17,13 +17,23 @@
 
 获取账号 id 后，只需在你的 README 中添加以下内容，并将`id`查询参数设置为你的网易云音乐账号 id
 
-由于 `Vercel` 的限制，所有图片汇总返回过大会报错，所以后面的示例图片的 `size` 都为 60，保证可以访问
+由于 `Vercel` 的限制，所有图片汇总返回过大会报错，所以后面的示例图片的 `size` 都为 60，保证可以访问；目前支持两种主题样式，分别是：`list(默认)`、`card`
+
+### 主题为list
 
 ```md
 [![Netease recently played](https://netease-recent-profile.vercel.app/?id=126764012&size=60)](https://netease-recent-profile.vercel.app/?id=126764012&size=60)
 ```
 
 [![Netease recently played](https://netease-recent-profile.vercel.app/?id=126764012&size=60)](https://netease-recent-profile.vercel.app/?id=126764012&size=60)
+
+### 主题为card
+
+```md
+[![Netease recently played](https://netease-recent-profile.vercel.app/?id=126764012&theme=card)](https://netease-recent-profile.vercel.app/?id=126764012&theme=card)
+```
+
+[![Netease recently played](https://netease-recent-profile.vercel.app/?id=126764012&theme=card)](https://netease-recent-profile.vercel.app/?id=126764012&theme=card)
 
 如果你想将卡片嵌在你的网页中，也可以这样使用：
 
@@ -31,7 +41,9 @@
 <img src="https://netease-recent-profile.vercel.app/?id=126764012&size=60" alt="Netease recently played" title="Netease recently played">
 ```
 
-## ⚙ 自定义配置
+两种主题详细的自定义配置如下。
+
+## ⚙ 主题为list自定义配置
 
 ### 听歌排行类型
 
@@ -50,8 +62,8 @@
 
 请传递查询参数 `show_percent`
 
-- 默认为 `0`：即表示不打开此特性
-- 传入 `1`：即表示为打开此特性
+- 默认为 `0`：即默认不开启此特性
+- 传入 `1`：即表示开启此特性
 
 ```md
 [![Netease recently played](https://netease-recent-profile.vercel.app/?id=126764012&show_percent=1&size=60)](https://netease-recent-profile.vercel.app/?id=126764012&show_percent=1&size=60)
@@ -144,6 +156,46 @@
 ```md
 [![Netease recently played](https://netease-recent-profile.vercel.app/?id=126764012&cache=28800&size=60)](https://netease-recent-profile.vercel.app/?id=126764012&cache=28800&size=60)
 ```
+
+## ⚙ 主题为card自定义配置
+
+### 是否显示跳动Bar
+
+请传递查询参数 `show_bar`
+
+- 默认为 `1`：即默认开启此特性
+- 传入 `0`：即表示不开启此特性
+
+```md
+[![Netease recently played](https://netease-recent-profile.vercel.app/?id=126764012&theme=card&show_bar=0)](https://netease-recent-profile.vercel.app/?id=126764012&theme=card&show_bar=0)
+```
+
+[![Netease recently played](https://netease-recent-profile.vercel.app/?id=126764012&theme=card&show_bar=0)](https://netease-recent-profile.vercel.app/?id=126764012&theme=card&show_bar=0)
+
+### 设置主色调
+
+请传递查询参数 `themeColor`，默认为 `53b14f`
+
+> 注意为十六进制HEX值
+
+```md
+[![Netease recently played](https://netease-recent-profile.vercel.app/?id=126764012&theme=card&themeColor=e60026)](https://netease-recent-profile.vercel.app/?id=126764012&theme=card&themeColor=e60026)
+```
+
+[![Netease recently played](https://netease-recent-profile.vercel.app/?id=126764012&theme=card&themeColor=e60026)](https://netease-recent-profile.vercel.app/?id=126764012&theme=card&themeColor=e60026)
+
+### 背景颜色
+
+和list主题一样，请传递查询参数 `bg`
+
+- 默认为 `dark`：即暗色
+- 传入 `light`：即浅色
+
+```md
+[![Netease recently played](https://netease-recent-profile.vercel.app/?id=126764012&theme=card&bg=light)](https://netease-recent-profile.vercel.app/?id=126764012&theme=card&bg=light)
+```
+
+[![Netease recently played](https://netease-recent-profile.vercel.app/?id=126764012&theme=card&bg=light)](https://netease-recent-profile.vercel.app/?id=126764012&theme=card&bg=light)
 
 ## 🚀 部署
 
