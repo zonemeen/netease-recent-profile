@@ -159,6 +159,8 @@
 
 ## ⚙ 主题为card自定义配置
 
+> 灵感来自于 [spotify-github-profile](https://github.com/kittinan/spotify-github-profile)
+
 ### 标题
 
 请传递查询参数 `title`，并将其设置为你想要的标题
