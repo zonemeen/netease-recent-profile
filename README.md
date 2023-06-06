@@ -19,22 +19,6 @@
 
 由于 `Vercel` 的限制，所有图片汇总返回过大会报错，所以后面的示例图片的 `size` 都为 60，保证可以访问；目前支持两种主题样式，分别是：`list(默认)`、`card`
 
-### 主题为 list
-
-```md
-[![Netease recently played](https://netease-recent-profile.vercel.app/?id=126764012&size=60)](https://netease-recent-profile.vercel.app/?id=126764012&size=60)
-```
-
-[![Netease recently played](https://netease-recent-profile.vercel.app/?id=126764012&size=60)](https://netease-recent-profile.vercel.app/?id=126764012&size=60)
-
-### 主题为 card
-
-```md
-[![Netease recently played](https://netease-recent-profile.vercel.app/?id=126764012&theme=card)](https://netease-recent-profile.vercel.app/?id=126764012&theme=card)
-```
-
-[![Netease recently played](https://netease-recent-profile.vercel.app/?id=126764012&theme=card)](https://netease-recent-profile.vercel.app/?id=126764012&theme=card)
-
 如果你想将卡片嵌在你的网页中，也可以这样使用：
 
 ```md
@@ -172,6 +156,19 @@
 ```
 
 [![Netease recently played](https://netease-recent-profile.vercel.app/?id=126764012&theme=card&title=最近最常听)](https://netease-recent-profile.vercel.app/?id=126764012&theme=card&title=最近最常听)
+
+### 是否为彩虹 Bar
+
+请传递查询参数 `show_rainbow`
+
+- 默认为 `0`：即默认不开启此特性
+- 传入 `1`：即表示开启此特性
+
+```md
+[![Netease recently played](https://netease-recent-profile.vercel.app/?id=126764012&theme=card&show_rainbow=1)](https://netease-recent-profile.vercel.app/?id=126764012&theme=card&show_rainbow=1)
+```
+
+[![Netease recently played](https://netease-recent-profile.vercel.app/?id=126764012&theme=card&show_rainbow=1)](https://netease-recent-profile.vercel.app/?id=126764012&theme=card&show_rainbow=1)
 
 ### 是否显示跳动 Bar
 
