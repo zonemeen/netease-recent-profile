@@ -1,0 +1,125 @@
+<%
+generateCssBar = function(barNum = 66){
+    let barCss = ""
+    let left = 1
+    for (let i = 1; i<=barNum; i++) {
+        let anim = Math.floor(Math.random() * (500 - 350 + 1)) + 350
+        barCss += `.bar:nth-child(${i})  { left: ${left}px; animation-duration: ${anim}ms; }`
+        left += 4
+    }
+    return barCss
+}
+generateContentBar = function(barNum = 66){
+    let contentBar = ""
+    for (let i = 0; i < barNum; i++) {
+        contentBar += "<div class='bar'></div>"
+    }
+    return contentBar
+}
+%>
+
+<svg width="280" height="<%= themeConfig.show_bar === '1' ? 403 : 385 %>" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-labelledby="cardTitle" role="img">
+    <title id="cardTitle">Now playing on Netease</title>
+    <foreignObject width="280" height="<%= themeConfig.show_bar === '1' ? 403 : 385 %>">
+        <div xmlns="http://www.w3.org/1999/xhtml" class="container">
+            <div class="playing">
+                <%= themeConfig.title %>
+                <svg class="logo" viewBox="0 0 1024 1024" xmlns="http://www.w3.org/2000/svg" width="32" height="32" xmlns:xlink="http://www.w3.org/1999/xlink"><path d="M512 938.666667C276.352 938.666667 85.333333 747.648 85.333333 512S276.352 85.333333 512 85.333333s426.666667 191.018667 426.666667 426.666667-191.018667 426.666667-426.666667 426.666667z m-46.336-445.098667c10.24-35.84 45.866667-65.749333 84.906667-70.314667 7.978667 29.610667 16.554667 58.581333 23.253333 88.021334 2.261333 9.813333 1.578667 21.12-0.768 31.018666-9.088 38.058667-53.248 52.992-84.394667 29.226667-22.613333-17.28-31.658667-47.786667-22.997333-77.952z m162.858667-8.405333c-5.333333-19.84-10.922667-39.552-16.768-60.586667 21.333333 5.546667 38.741333 15.36 53.546666 29.781333 53.632 52.096 59.093333 140.8 12.544 201.856-48.426667 63.573333-134.613333 91.050667-214.528 68.48-98.218667-27.733333-162.474667-125.952-146.816-226.816 11.690667-75.434667 54.186667-128.170667 123.733334-159.274666 17.365333-7.765333 24.746667-23.893333 17.92-39.68-6.698667-15.530667-23.04-21.504-40.277334-14.634667-116.096 46.464-184.32 176.384-156.586666 298.112 30.421333 133.034667 149.12 220.288 284.8 207.317333 73.898667-7.04 134.997333-40.448 179.882666-100.138666 64.256-85.418667 55.338667-204.074667-19.754666-277.290667-28.416-27.733333-62.762667-43.434667-101.973334-49.194667-3.541333-0.554667-9.258667-2.218667-9.898666-4.522666-3.712-13.354667-7.68-26.965333-8.789334-40.704-1.237333-15.232 12.373333-27.306667 27.733334-27.52 10.794667-0.128 18.517333 5.546667 25.728 12.8 12.928 12.8 30.037333 13.738667 42.154666 2.645333 12.373333-11.264 12.629333-28.928 0.768-43.008-24.149333-28.672-67.669333-38.016-103.68-22.314667-36.138667 15.786667-56.362667 50.645333-51.2 89.301334 1.621333 11.946667 4.693333 23.765333 7.125334 35.925333l-11.093334 3.072a164.821333 164.821333 0 0 0-89.514666 60.330667c-39.296 52.053333-39.936 120.661333-1.749334 168.405333 54.357333 68.010667 159.872 54.784 192.981334-24.234667 12.117333-28.842667 11.733333-58.368 3.712-88.106666z" fill="<%= `#${themeConfig.themeColor}` %>"></path></svg>
+            </div>
+            <div class="song"><%= recentPlayedList[0].name %></div>
+            <div class="artist"><%= recentPlayedList[0].artist %></div>
+            <%
+            if(themeConfig.show_bar === '1') {
+            %>
+            <div id="bars"><%- generateContentBar() %></div>
+            <%
+            }
+            %>
+            <a href="<%= recentPlayedList[0].url %>" target="_BLANK">
+                <center>
+                    <img src="<%= recentPlayedList[0].cover %>" width="265" height="265" class="cover" />
+                </center>
+            </a>
+        </div>
+        <style>
+            div {
+                font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Helvetica, Arial, sans-serif, Apple Color Emoji, Segoe UI Emoji;
+            }
+
+            .container {
+                background-color: <%= themeConfig.color.bgColor %>;
+                border-radius: 8px;
+                padding: 8px;
+                <%
+                if(themeConfig.bg === 'light') {
+                %>
+                border: 1px solid #e4e2e2;
+                <%
+                }
+                %>
+            }
+
+            .playing {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                color: <%= `#${themeConfig.themeColor}` %>;
+                font-weight: bold;
+                text-align: center;
+            }
+
+            .song {
+                color: <%= themeConfig.color.songColor %>;
+                font-weight: bold;
+                font-size: 20px;
+                text-align: center;
+                margin-bottom: 5px;
+            }
+
+            .artist {
+                color: <%= themeConfig.color.artistColor %>;
+                font-size: 16px;
+                text-align: center;
+                margin-bottom: <%= themeConfig.show_bar === '1' ? 28 : 10 %>px;
+            }
+
+            .logo {
+                margin-left: 5px;
+                margin-top: 3px;
+            }
+
+            .cover {
+                border-radius: 5px;
+            }
+
+            #bars {
+                height: 30px;
+                margin: -29px 0 0 0px;
+                position: absolute;
+                width: 40px;
+            }
+
+            .bar {
+                background: <%= `#${themeConfig.themeColor}` %>;
+                bottom: 1px;
+                height: 3px;
+                position: absolute;
+                width: 3px;
+                animation: sound 0ms -800ms linear infinite alternate;
+            }
+
+            @keyframes sound {
+                0% {
+                    opacity: .35;
+                    height: 3px;
+                }
+
+                100% {
+                    opacity: 1;
+                    height: 22px;
+                }
+            }
+            <%- generateCssBar() %>
+        </style>
+    </foreignObject>
+</svg>

@@ -4,7 +4,7 @@ import crypto from 'node:crypto'
 import path from 'node:path'
 import ejs from 'ejs'
 import axios from 'axios'
-import { CONSTANTS, renderError } from '../src/utils.js'
+import { CONSTANTS, renderError } from '../utils/index.js'
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url))
 const readTemplateFile = (theme) =>
@@ -32,8 +32,10 @@ export default async (req, res) => {
       column = '1',
       bg = 'dark',
       theme = 'list',
+      themeColor = '53b14f',
       show_percent = '0',
-      title = 'Recently Played',
+      show_bar = '1',
+      title = theme === 'list' ? 'Recently Played' : theme === 'card' ? 'Recently played on' : '',
       cache = CONSTANTS.CACHE_FOUR_HOURS,
     } = req.query
 
@@ -98,10 +100,18 @@ export default async (req, res) => {
         width: parseInt(width),
         column: parseInt(column),
         bg,
+        show_bar,
+        themeColor,
         color:
-          bg === 'light'
+          theme === 'list' && bg === 'light'
             ? { bgColor: '#f6f8fa', fontColor: '#161b22', itemBgColor: '#000000' }
-            : { bgColor: '#212121', fontColor: '#f4f4f4', itemBgColor: '#ffffff' },
+            : theme === 'list' && bg === 'dark'
+            ? { bgColor: '#212121', fontColor: '#f4f4f4', itemBgColor: '#ffffff' }
+            : theme === 'card' && bg === 'dark'
+            ? { bgColor: '#121212', songColor: '#ffffff', artistColor: '#b3b3b3' }
+            : theme === 'card' && bg === 'light'
+            ? { bgColor: '#f6f8fa', songColor: '#161b22', artistColor: '#737373' }
+            : {},
       },
     }
     res.setHeader(
