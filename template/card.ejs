@@ -1,5 +1,5 @@
 <%
-generateCssBar = function(barNum = 66){
+generateCssBar = function(barNum = 65){
     let barCss = ""
     let left = 1
     for (let i = 1; i<=barNum; i++) {
@@ -9,7 +9,7 @@ generateCssBar = function(barNum = 66){
     }
     return barCss
 }
-generateContentBar = function(barNum = 66){
+generateContentBar = function(barNum = 65){
     let contentBar = ""
     for (let i = 0; i < barNum; i++) {
         contentBar += "<div class='bar'></div>"
@@ -37,7 +37,7 @@ generateContentBar = function(barNum = 66){
             %>
             <a href="<%= recentPlayedList[0].url %>" target="_BLANK">
                 <center>
-                    <img src="<%= recentPlayedList[0].cover %>" width="265" height="265" class="cover" />
+                    <img src="<%= recentPlayedList[0].cover %>" width="262" height="265" class="cover" />
                 </center>
             </a>
         </div>
