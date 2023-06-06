@@ -159,6 +159,19 @@
 
 ## ⚙ 主题为card自定义配置
 
+### 标题
+
+请传递查询参数 `title`，并将其设置为你想要的标题
+
+- 默认标题为 `Recently played on`
+
+```md
+[![Netease recently played](https://netease-recent-profile.vercel.app/?id=126764012&theme=card&title=最近最常听)](https://netease-recent-profile.vercel.app/?id=126764012&theme=card&title=最近最常听)
+```
+
+[![Netease recently played](https://netease-recent-profile.vercel.app/?id=126764012&theme=card&title=最近最常听)](https://netease-recent-profile.vercel.app/?id=126764012&theme=card&title=最近最常听)
+
+
 ### 是否显示跳动Bar
 
 请传递查询参数 `show_bar`
