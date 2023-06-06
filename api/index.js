@@ -30,7 +30,7 @@ export default async (req, res) => {
       width = '280',
       size = '800',
       column = '1',
-      bg = 'dark',
+      mode = 'dark',
       theme = 'list',
       themeColor = '53b14f',
       show_percent = '0',
@@ -99,17 +99,17 @@ export default async (req, res) => {
         title,
         width: parseInt(width),
         column: parseInt(column),
-        bg,
+        mode,
         show_bar,
         themeColor,
         color:
-          theme === 'list' && bg === 'light'
+          theme === 'list' && mode === 'light'
             ? { bgColor: '#f6f8fa', fontColor: '#161b22', itemBgColor: '#000000' }
-            : theme === 'list' && bg === 'dark'
+            : theme === 'list' && mode === 'dark'
             ? { bgColor: '#212121', fontColor: '#f4f4f4', itemBgColor: '#ffffff' }
-            : theme === 'card' && bg === 'dark'
+            : theme === 'card' && mode === 'dark'
             ? { bgColor: '#121212', songColor: '#ffffff', artistColor: '#b3b3b3' }
-            : theme === 'card' && bg === 'light'
+            : theme === 'card' && mode === 'light'
             ? { bgColor: '#f6f8fa', songColor: '#161b22', artistColor: '#737373' }
             : {},
       },

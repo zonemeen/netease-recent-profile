@@ -19,7 +19,7 @@
 
 由于 `Vercel` 的限制，所有图片汇总返回过大会报错，所以后面的示例图片的 `size` 都为 60，保证可以访问；目前支持两种主题样式，分别是：`list(默认)`、`card`
 
-### 主题为list
+### 主题为 list
 
 ```md
 [![Netease recently played](https://netease-recent-profile.vercel.app/?id=126764012&size=60)](https://netease-recent-profile.vercel.app/?id=126764012&size=60)
@@ -27,7 +27,7 @@
 
 [![Netease recently played](https://netease-recent-profile.vercel.app/?id=126764012&size=60)](https://netease-recent-profile.vercel.app/?id=126764012&size=60)
 
-### 主题为card
+### 主题为 card
 
 ```md
 [![Netease recently played](https://netease-recent-profile.vercel.app/?id=126764012&theme=card)](https://netease-recent-profile.vercel.app/?id=126764012&theme=card)
@@ -43,7 +43,7 @@
 
 两种主题详细的自定义配置如下。
 
-## ⚙ 主题为list自定义配置
+## ⚙ 主题为 list 自定义配置
 
 ### 听歌排行类型
 
@@ -71,18 +71,18 @@
 
 [![Netease recently played](https://netease-recent-profile.vercel.app/?id=126764012&show_percent=1&size=60)](https://netease-recent-profile.vercel.app/?id=126764012&show_percent=1&size=60)
 
-### 背景颜色
+### 模式
 
-请传递查询参数 `bg`
+请传递查询参数 `mode`
 
-- 默认为 `dark`：即暗色
-- 传入 `light`：即浅色
+- 默认为 `dark`：即暗夜模式
+- 传入 `light`：即浅色模式
 
 ```md
-[![Netease recently played](https://netease-recent-profile.vercel.app/?id=126764012&bg=light&size=60)](https://netease-recent-profile.vercel.app/?id=126764012&bg=light&size=60)
+[![Netease recently played](https://netease-recent-profile.vercel.app/?id=126764012&mode=light&size=60)](https://netease-recent-profile.vercel.app/?id=126764012&mode=light&size=60)
 ```
 
-[![Netease recently played](https://netease-recent-profile.vercel.app/?id=126764012&bg=light&size=60)](https://netease-recent-profile.vercel.app/?id=126764012&bg=light&size=60)
+[![Netease recently played](https://netease-recent-profile.vercel.app/?id=126764012&mode=light&size=60)](https://netease-recent-profile.vercel.app/?id=126764012&mode=light&size=60)
 
 ### 歌曲数量
 
@@ -157,7 +157,7 @@
 [![Netease recently played](https://netease-recent-profile.vercel.app/?id=126764012&cache=28800&size=60)](https://netease-recent-profile.vercel.app/?id=126764012&cache=28800&size=60)
 ```
 
-## ⚙ 主题为card自定义配置
+## ⚙ 主题为 card 自定义配置
 
 > 灵感来自于 [spotify-github-profile](https://github.com/kittinan/spotify-github-profile)
 
@@ -173,8 +173,7 @@
 
 [![Netease recently played](https://netease-recent-profile.vercel.app/?id=126764012&theme=card&title=最近最常听)](https://netease-recent-profile.vercel.app/?id=126764012&theme=card&title=最近最常听)
 
-
-### 是否显示跳动Bar
+### 是否显示跳动 Bar
 
 请传递查询参数 `show_bar`
 
@@ -191,7 +190,7 @@
 
 请传递查询参数 `themeColor`，默认为 `53b14f`
 
-> 注意为十六进制HEX值
+> 注意为十六进制 HEX 值
 
 ```md
 [![Netease recently played](https://netease-recent-profile.vercel.app/?id=126764012&theme=card&themeColor=e60026)](https://netease-recent-profile.vercel.app/?id=126764012&theme=card&themeColor=e60026)
@@ -199,18 +198,18 @@
 
 [![Netease recently played](https://netease-recent-profile.vercel.app/?id=126764012&theme=card&themeColor=e60026)](https://netease-recent-profile.vercel.app/?id=126764012&theme=card&themeColor=e60026)
 
-### 背景颜色
+### 模式
 
-和list主题一样，请传递查询参数 `bg`
+和 list 模式一样，请传递查询参数 `mode`
 
-- 默认为 `dark`：即暗色
-- 传入 `light`：即浅色
+- 默认为 `dark`：即暗夜模式
+- 传入 `light`：即浅色模式
 
 ```md
-[![Netease recently played](https://netease-recent-profile.vercel.app/?id=126764012&theme=card&bg=light)](https://netease-recent-profile.vercel.app/?id=126764012&theme=card&bg=light)
+[![Netease recently played](https://netease-recent-profile.vercel.app/?id=126764012&theme=card&mode=light)](https://netease-recent-profile.vercel.app/?id=126764012&theme=card&mode=light)
 ```
 
-[![Netease recently played](https://netease-recent-profile.vercel.app/?id=126764012&theme=card&bg=light)](https://netease-recent-profile.vercel.app/?id=126764012&theme=card&bg=light)
+[![Netease recently played](https://netease-recent-profile.vercel.app/?id=126764012&theme=card&mode=light)](https://netease-recent-profile.vercel.app/?id=126764012&theme=card&mode=light)
 
 ## 🚀 部署
 
