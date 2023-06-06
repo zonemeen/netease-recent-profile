@@ -3,8 +3,11 @@ generateCssBar = function(barNum = 65){
     let barCss = ""
     let left = 1
     for (let i = 1; i<=barNum; i++) {
-        let anim = Math.floor(Math.random() * (500 - 350 + 1)) + 350
-        barCss += `.bar:nth-child(${i})  { left: ${left}px; animation-duration: ${anim}ms; }`
+        let r = Math.round(Math.sin(0.3 * i) * 127.5 + 127.5);
+        let g = Math.round(Math.sin(0.3 * i + 2 * Math.PI / 3) * 127.5 + 127.5);
+        let b = Math.round(Math.sin(0.3 * i + 4 * Math.PI / 3) * 127.5 + 127.5);
+        let anim = Math.floor(Math.random() * (750 - 500 + 1)) + 500
+        barCss += `.bar:nth-child(${i})  { left: ${left}px; animation-duration: ${anim}ms; background: ${themeConfig.show_rainbow === '1' ? `rgb(${r} ${g} ${b})` : themeConfig.themeColor}; }`
         left += 4
     }
     return barCss
@@ -97,6 +100,7 @@ generateContentBar = function(barNum = 65){
                 margin: -29px 0 0 0px;
                 position: absolute;
                 width: 40px;
+                animation: rainbow 0ms -800ms linear infinite;
             }
 
             .bar {
@@ -118,6 +122,9 @@ generateContentBar = function(barNum = 65){
                     opacity: 1;
                     height: 22px;
                 }
+            }
+            @keyframes rainbow {
+                100% { filter: hue-rotate(360deg) }
             }
             <%- generateCssBar() %>
         </style>

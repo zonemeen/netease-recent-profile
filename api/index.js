@@ -35,6 +35,7 @@ export default async (req, res) => {
       themeColor = '53b14f',
       show_percent = '0',
       show_bar = '1',
+      show_rainbow = '0',
       title = theme === 'list' ? 'Recently Played' : theme === 'card' ? 'Recently played on' : '',
       cache = CONSTANTS.CACHE_FOUR_HOURS,
     } = req.query
@@ -101,6 +102,7 @@ export default async (req, res) => {
         column: parseInt(column),
         mode,
         show_bar,
+        show_rainbow,
         themeColor,
         color:
           theme === 'list' && mode === 'light'
