@@ -7,7 +7,8 @@ import axios from 'axios'
 import { CONSTANTS, renderError } from '../src/utils.js'
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url))
-const readTemplateFile = () => readFileSync(path.resolve(__dirname, '../svg.ejs'), 'utf-8')
+const readTemplateFile = (theme) =>
+  readFileSync(path.resolve(__dirname, `../template/${theme}.ejs`), 'utf-8')
 
 const aesEncrypt = (secKey, text) => {
   const cipher = crypto.createCipheriv('AES-128-CBC', secKey, '0102030405060708')
@@ -29,7 +30,8 @@ export default async (req, res) => {
       width = '280',
       size = '800',
       column = '1',
-      theme = 'dark',
+      bg = 'dark',
+      theme = 'list',
       show_percent = '0',
       title = 'Recently Played',
       cache = CONSTANTS.CACHE_FOUR_HOURS,
@@ -95,9 +97,9 @@ export default async (req, res) => {
         title,
         width: parseInt(width),
         column: parseInt(column),
-        theme,
+        bg,
         color:
-          theme === 'light'
+          bg === 'light'
             ? { bgColor: '#f6f8fa', fontColor: '#161b22', itemBgColor: '#000000' }
             : { bgColor: '#212121', fontColor: '#f4f4f4', itemBgColor: '#ffffff' },
       },
@@ -111,7 +113,7 @@ export default async (req, res) => {
     )
     res.setHeader('content-type', 'image/svg+xml')
     res.statusCode = 200
-    res.send(ejs.render(readTemplateFile(), templateParams))
+    res.send(ejs.render(readTemplateFile(theme), templateParams))
   } catch (err) {
     res.setHeader('Cache-Control', `no-cache, no-store, must-revalidate`)
     return res.send(renderError(err.message, err.secondaryMessage))

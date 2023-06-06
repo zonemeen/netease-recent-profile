@@ -17,7 +17,7 @@
 
 获取账号 id 后，只需在你的 README 中添加以下内容，并将`id`查询参数设置为你的网易云音乐账号 id
 
-由于 `Vercel` 的限制，所有图片汇总返回过大会报错，所以后面的示例图片的 `size` 都为60，保证可以访问
+由于 `Vercel` 的限制，所有图片汇总返回过大会报错，所以后面的示例图片的 `size` 都为 60，保证可以访问
 
 ```md
 [![Netease recently played](https://netease-recent-profile.vercel.app/?id=126764012&size=60)](https://netease-recent-profile.vercel.app/?id=126764012&size=60)
@@ -59,18 +59,18 @@
 
 [![Netease recently played](https://netease-recent-profile.vercel.app/?id=126764012&show_percent=1&size=60)](https://netease-recent-profile.vercel.app/?id=126764012&show_percent=1&size=60)
 
-### 主题模式
+### 背景颜色
 
-请传递查询参数`theme`
+请传递查询参数 `bg`
 
-- 默认为 `dark`：即暗夜模式
-- 传入 `light`：即浅色模式
+- 默认为 `dark`：即暗色
+- 传入 `light`：即浅色
 
 ```md
-[![Netease recently played](https://netease-recent-profile.vercel.app/?id=126764012&theme=light&size=60)](https://netease-recent-profile.vercel.app/?id=126764012&theme=light&size=60)
+[![Netease recently played](https://netease-recent-profile.vercel.app/?id=126764012&bg=light&size=60)](https://netease-recent-profile.vercel.app/?id=126764012&bg=light&size=60)
 ```
 
-[![Netease recently played](https://netease-recent-profile.vercel.app/?id=126764012&theme=light&size=60)](https://netease-recent-profile.vercel.app/?id=126764012&theme=light&size=60)
+[![Netease recently played](https://netease-recent-profile.vercel.app/?id=126764012&bg=light&size=60)](https://netease-recent-profile.vercel.app/?id=126764012&bg=light&size=60)
 
 ### 歌曲数量
 

@@ -25,7 +25,7 @@ fontSizeLimit = function(text, fontSize, maxWidth){
 %>
 
 <svg width="<%= themeConfig.width*themeConfig.column - 8.4*(themeConfig.column-1) %>" height="<%= (74+(Math.ceil(recentPlayedList.length/themeConfig.column)-1)*42)*1.4 %>" viewBox="0 0 <%= themeConfig.width*themeConfig.column - 8.4*(themeConfig.column-1) %> <%= (74+(Math.ceil(recentPlayedList.length/themeConfig.column)-1)*42)*1.4 %>" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-  <rect stroke="<%= themeConfig.theme === 'light' ? '#e4e2e2' : '' %>" width="<%= themeConfig.width*themeConfig.column - 8.4*(themeConfig.column-1) %>" height="<%= (73+(Math.ceil(recentPlayedList.length/themeConfig.column)-1)*42)*1.4 %>" rx="5.6" fill="<%= themeConfig.color.bgColor %>" />
+  <rect stroke="<%= themeConfig.bg === 'light' ? '#e4e2e2' : '' %>" width="<%= themeConfig.width*themeConfig.column - 8.4*(themeConfig.column-1) %>" height="<%= (73+(Math.ceil(recentPlayedList.length/themeConfig.column)-1)*42)*1.4 %>" rx="5.6" fill="<%= themeConfig.color.bgColor %>" />
   <rect x="<%= themeConfig.width*themeConfig.column - 30 - 8.4*(themeConfig.column-1) %>" y="10" width="21" height="18.2" fill="url(#pattern-logo)" />
   <text fill="<%= themeConfig.color.fontColor %>" xml:space="preserve" style="white-space: pre" font-size="14" letter-spacing="0em">
     <tspan x="10" y="<%= 23.5 %>"><%= themeConfig.title %></tspan>
