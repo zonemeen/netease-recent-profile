@@ -17,7 +17,7 @@
 
 获取账号 id 后，只需在你的 README 中添加以下内容，并将`id`查询参数设置为你的网易云音乐账号 id
 
-由于 `Vercel` 的限制，所有图片汇总返回过大会报错，所以后面的示例图片的 `size` 都为 60，保证可以访问；目前支持两种主题样式，分别是：`list(默认)`、`card`
+目前支持两种主题样式，分别是：`list(默认)`、`card`；由于 `Vercel` 的限制，所有图片返回过大会报错，所以后面的示例图片的 `size`，`list` 类型为 60，`card` 类型为 300，保证可以访问
 
 如果你想将卡片嵌在你的网页中，也可以这样使用：
 
@@ -152,10 +152,10 @@
 - 默认标题为 `Recently played on`
 
 ```md
-[![Netease recently played](https://netease-recent-profile.vercel.app/?id=126764012&theme=card&title=最近最常听)](https://netease-recent-profile.vercel.app/?id=126764012&theme=card&title=最近最常听)
+[![Netease recently played](https://netease-recent-profile.vercel.app/?id=126764012&theme=card&title=最近最常听&size=300)](https://netease-recent-profile.vercel.app/?id=126764012&theme=card&title=最近最常听&size=300)
 ```
 
-[![Netease recently played](https://netease-recent-profile.vercel.app/?id=126764012&theme=card&title=最近最常听)](https://netease-recent-profile.vercel.app/?id=126764012&theme=card&title=最近最常听)
+[![Netease recently played](https://netease-recent-profile.vercel.app/?id=126764012&theme=card&title=最近最常听&size=300)](https://netease-recent-profile.vercel.app/?id=126764012&theme=card&title=最近最常听&size=300)
 
 ### 是否为彩虹 Bar
 
@@ -165,10 +165,10 @@
 - 传入 `1`：即表示开启此特性
 
 ```md
-[![Netease recently played](https://netease-recent-profile.vercel.app/?id=126764012&theme=card&show_rainbow=1)](https://netease-recent-profile.vercel.app/?id=126764012&theme=card&show_rainbow=1)
+[![Netease recently played](https://netease-recent-profile.vercel.app/?id=126764012&theme=card&show_rainbow=1&size=300)](https://netease-recent-profile.vercel.app/?id=126764012&theme=card&show_rainbow=1&size=300)
 ```
 
-[![Netease recently played](https://netease-recent-profile.vercel.app/?id=126764012&theme=card&show_rainbow=1)](https://netease-recent-profile.vercel.app/?id=126764012&theme=card&show_rainbow=1)
+[![Netease recently played](https://netease-recent-profile.vercel.app/?id=126764012&theme=card&show_rainbow=1&size=300)](https://netease-recent-profile.vercel.app/?id=126764012&theme=card&show_rainbow=1&size=300)
 
 ### 是否显示跳动 Bar
 
@@ -178,10 +178,10 @@
 - 传入 `0`：即表示不开启此特性
 
 ```md
-[![Netease recently played](https://netease-recent-profile.vercel.app/?id=126764012&theme=card&show_bar=0)](https://netease-recent-profile.vercel.app/?id=126764012&theme=card&show_bar=0)
+[![Netease recently played](https://netease-recent-profile.vercel.app/?id=126764012&theme=card&show_bar=0&size=300)](https://netease-recent-profile.vercel.app/?id=126764012&theme=card&show_bar=0&size=300)
 ```
 
-[![Netease recently played](https://netease-recent-profile.vercel.app/?id=126764012&theme=card&show_bar=0)](https://netease-recent-profile.vercel.app/?id=126764012&theme=card&show_bar=0)
+[![Netease recently played](https://netease-recent-profile.vercel.app/?id=126764012&theme=card&show_bar=0&size=300)](https://netease-recent-profile.vercel.app/?id=126764012&theme=card&show_bar=0&size=300)
 
 ### 设置主色调
 
@@ -190,10 +190,10 @@
 > 注意为十六进制 HEX 值
 
 ```md
-[![Netease recently played](https://netease-recent-profile.vercel.app/?id=126764012&theme=card&themeColor=e60026)](https://netease-recent-profile.vercel.app/?id=126764012&theme=card&themeColor=e60026)
+[![Netease recently played](https://netease-recent-profile.vercel.app/?id=126764012&theme=card&themeColor=e60026&size=300)](https://netease-recent-profile.vercel.app/?id=126764012&theme=card&themeColor=e60026&size=300)
 ```
 
-[![Netease recently played](https://netease-recent-profile.vercel.app/?id=126764012&theme=card&themeColor=e60026)](https://netease-recent-profile.vercel.app/?id=126764012&theme=card&themeColor=e60026)
+[![Netease recently played](https://netease-recent-profile.vercel.app/?id=126764012&theme=card&themeColor=e60026&size=300)](https://netease-recent-profile.vercel.app/?id=126764012&theme=card&themeColor=e60026&size=300)
 
 ### 模式
 
@@ -203,10 +203,10 @@
 - 传入 `light`：即浅色模式
 
 ```md
-[![Netease recently played](https://netease-recent-profile.vercel.app/?id=126764012&theme=card&mode=light)](https://netease-recent-profile.vercel.app/?id=126764012&theme=card&mode=light)
+[![Netease recently played](https://netease-recent-profile.vercel.app/?id=126764012&theme=card&mode=light&size=300)](https://netease-recent-profile.vercel.app/?id=126764012&theme=card&mode=light&size=300)
 ```
 
-[![Netease recently played](https://netease-recent-profile.vercel.app/?id=126764012&theme=card&mode=light)](https://netease-recent-profile.vercel.app/?id=126764012&theme=card&mode=light)
+[![Netease recently played](https://netease-recent-profile.vercel.app/?id=126764012&theme=card&mode=light&size=300)](https://netease-recent-profile.vercel.app/?id=126764012&theme=card&mode=light&size=300)
 
 ## 🚀 部署
 
