@@ -77,13 +77,19 @@ generateContentBar = function(barNum = 65){
                 font-size: 20px;
                 text-align: center;
                 margin-bottom: 5px;
+                overflow: hidden;
+                text-overflow: ellipsis;
+                white-space: nowrap;
             }
 
             .artist {
                 color: <%= themeConfig.color.artistColor %>;
+                margin-bottom: <%= themeConfig.show_bar === '1' ? 28 : 10 %>px;
                 font-size: 16px;
                 text-align: center;
-                margin-bottom: <%= themeConfig.show_bar === '1' ? 28 : 10 %>px;
+                overflow: hidden;
+                text-overflow: ellipsis;
+                white-space: nowrap;
             }
 
             .logo {
@@ -97,7 +103,7 @@ generateContentBar = function(barNum = 65){
 
             #bars {
                 height: 30px;
-                margin: -29px 0 0 0px;
+                margin: -29px 0 0 0;
                 position: absolute;
                 width: 40px;
                 animation: rainbow 0ms -800ms linear infinite;
