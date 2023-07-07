@@ -36,6 +36,7 @@ export default async (req, res) => {
       show_percent = '0',
       show_bar = '1',
       show_rainbow = '0',
+      show_random = '0',
       title = theme === 'list' ? 'Recently Played' : theme === 'card' ? 'Recently played on' : '',
       cache = CONSTANTS.CACHE_FOUR_HOURS,
     } = req.query
@@ -69,7 +70,16 @@ export default async (req, res) => {
       }
     )
 
-    const songs = (weekData ?? allData).slice(0, theme === 'list' ? parseInt(number) : 1)
+    const randomIndex = Math.floor(Math.random() * parseInt(number))
+
+    const songs = (weekData ?? allData).slice(
+      theme === 'card' && show_random === '1' ? randomIndex : 0,
+      theme === 'list'
+        ? parseInt(number)
+        : theme === 'card' && show_random === '1'
+        ? randomIndex + 1
+        : 1
+    )
 
     if (!songs.length) title = 'Not Played Recently'
 
