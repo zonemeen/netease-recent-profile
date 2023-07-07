@@ -208,6 +208,19 @@
 
 [![Netease recently played](https://netease-recent-profile.vercel.app/?id=126764012&theme=card&mode=light&size=300)](https://netease-recent-profile.vercel.app/?id=126764012&theme=card&mode=light&size=300)
 
+### 是否随机生成
+
+请传递查询参数 `show_random`，在 `number` 范围内随机生成
+
+- 默认为 `0`：即默认不开启此特性
+- 传入 `1`：即表示开启此特性
+
+```md
+[![Netease recently played](https://netease-recent-profile.vercel.app/?id=126764012&theme=card&show_random=1&size=300)](https://netease-recent-profile.vercel.app/?id=126764012&theme=card&show_random=1&size=300)
+```
+
+[![Netease recently played](https://netease-recent-profile.vercel.app/?id=126764012&theme=card&show_random=1&size=300)](https://netease-recent-profile.vercel.app/?id=126764012&theme=card&show_random=1&size=300)
+
 ## 🚀 部署
 
 可以通过 Vercel 进行部署
