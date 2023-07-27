@@ -70,7 +70,9 @@ export default async (req, res) => {
       }
     )
 
-    const randomIndex = Math.floor(Math.random() * parseInt(number))
+    const randomIndex = Math.floor(
+      Math.random() * Math.min((weekData ?? allData).length, parseInt(number))
+    )
 
     const songs = (weekData ?? allData).slice(
       theme === 'card' && show_random === '1' ? randomIndex : 0,
