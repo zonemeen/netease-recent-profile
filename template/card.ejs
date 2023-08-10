@@ -21,9 +21,9 @@ generateContentBar = function(barNum = 65){
 }
 %>
 
-<svg width="280" height="<%= themeConfig.show_bar === '1' ? 403 : 385 %>" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-labelledby="cardTitle" role="img">
+<svg width="280" height="<%= !recentPlayedList.length ? 84 : themeConfig.show_bar === '1' ? 403 : 385 %>" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-labelledby="cardTitle" role="img">
     <title id="cardTitle">Now playing on Netease</title>
-    <foreignObject width="280" height="<%= themeConfig.show_bar === '1' ? 403 : 385 %>">
+    <foreignObject width="280" height="<%= !recentPlayedList.length ? 84 : themeConfig.show_bar === '1' ? 403 : 385 %>">
         <div xmlns="http://www.w3.org/1999/xhtml" class="container">
             <div class="playing">
                 <%= themeConfig.title %>
