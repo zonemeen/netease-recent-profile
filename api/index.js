@@ -21,6 +21,17 @@ const aesRsaEncrypt = (text) => ({
     '84ca47bca10bad09a6b04c5c927ef077d9b9f1e37098aa3eac6ea70eb59df0aa28b691b7e75e4f1f9831754919ea784c8f74fbfadf2898b0be17849fd656060162857830e241aba44991601f137624094c114ea8d17bce815b0cd4e5b8e2fbaba978c6d1d14dc3d1faf852bdd28818031ccdaaa13a6018e1024e2aae98844210',
 })
 
+const templateColorVariants = {
+  list: {
+    light: { bgColor: '#f6f8fa', fontColor: '#161b22', itemBgColor: '#000000' },
+    dark: { bgColor: '#212121', fontColor: '#f4f4f4', itemBgColor: '#ffffff' },
+  },
+  card: {
+    light: { bgColor: '#f6f8fa', songColor: '#161b22', artistColor: '#737373' },
+    dark: { bgColor: '#121212', songColor: '#ffffff', artistColor: '#b3b3b3' },
+  },
+}
+
 export default async (req, res) => {
   try {
     let {
@@ -85,18 +96,17 @@ export default async (req, res) => {
 
     if (!songs.length) title = 'Not Played Recently'
 
-    const buffers = await Promise.all(
-      songs.map(({ song }) =>
-        axios.get(`${song.al.picUrl}${size !== '800' ? `?param=${size}x${size}` : ''}`, {
-          responseType: 'arraybuffer',
-        })
-      )
+    const covers = await Promise.all(
+      songs.map(async ({ song }) => {
+        const buffer = await axios.get(
+          `${song.al.picUrl}${size !== '800' ? `?param=${size}x${size}` : ''}`,
+          {
+            responseType: 'arraybuffer',
+          }
+        )
+        return `data:image/jpg;base64,${Buffer.from(buffer.data, 'binary').toString('base64')}`
+      })
     )
-
-    const covers = buffers.map((buffer) => {
-      const buffer64 = Buffer.from(buffer.data, 'binary').toString('base64')
-      return `data:image/jpg;base64,` + buffer64
-    })
 
     const templateParams = {
       recentPlayedList: songs.map(({ song, score }, i) => {
@@ -116,16 +126,7 @@ export default async (req, res) => {
         show_bar,
         show_rainbow,
         themeColor,
-        color:
-          theme === 'list' && mode === 'light'
-            ? { bgColor: '#f6f8fa', fontColor: '#161b22', itemBgColor: '#000000' }
-            : theme === 'list' && mode === 'dark'
-            ? { bgColor: '#212121', fontColor: '#f4f4f4', itemBgColor: '#ffffff' }
-            : theme === 'card' && mode === 'dark'
-            ? { bgColor: '#121212', songColor: '#ffffff', artistColor: '#b3b3b3' }
-            : theme === 'card' && mode === 'light'
-            ? { bgColor: '#f6f8fa', songColor: '#161b22', artistColor: '#737373' }
-            : {},
+        color: templateColorVariants[theme][mode] ?? {},
       },
     }
     res.setHeader(
