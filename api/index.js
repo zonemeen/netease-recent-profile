@@ -55,15 +55,10 @@ export default async (req, res) => {
     if (!id) throw new Error('Id is required')
 
     const {
-      data: { weekData, allData },
+      data: { allData, weekData },
     } = await axios.post(
       'https://music.163.com/weapi/v1/play/record?csrf_token=',
-      aesRsaEncrypt(
-        JSON.stringify({
-          uid: id,
-          type,
-        })
-      ),
+      aesRsaEncrypt(JSON.stringify({ uid: id, type })),
       {
         headers: {
           Accept: '*/*',
@@ -75,8 +70,6 @@ export default async (req, res) => {
           Referer: 'https://music.163.com/',
           'User-Agent':
             'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/90.0.4430.212 Safari/537.36',
-          Cookie:
-            'os=pc; osver=Microsoft-Windows-10-Professional-build-10586-64bit; appver=2.0.3.131777; ',
         },
       }
     )
